@@ -486,7 +486,7 @@ button[aria-label]::before {
 .burger-button.is-active .burger-button__line:first-child {
   rotate: 45deg;
   transform-origin: 0;
-  translate: 0.25em 0.37em;
+  translate: 0.26em 0.39em;
 }
 .burger-button.is-active .burger-button__line:nth-child(2) {
   rotate: -45deg;
