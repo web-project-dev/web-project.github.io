@@ -254,6 +254,7 @@ body {
   letter-spacing: -0.03em;
   background-color: var(--color-light);
   color: var(--color-dark);
+  touch-action: manipulation;
 }
 
 main {
