@@ -7,7 +7,7 @@ const burgerButton = document.querySelector('.burger-button');
 
 nav1.forEach(item => {
     item.onclick = function() {
-        document.querySelector('.home').scrollIntoView({ behavior: 'smooth', block: 'end' });
+        document.querySelector('.home').scrollIntoView({ behavior: 'smooth', block: 'start' });
         burgerModal.classList.remove('is-active')
         burgerButton.classList.remove('is-active')
     };
@@ -16,7 +16,7 @@ nav1.forEach(item => {
 
 nav2.forEach(item => {
     item.onclick = function() {
-        document.querySelector('.services').scrollIntoView({ behavior: 'smooth', block: 'end' });
+        document.querySelector('.services').scrollIntoView({ behavior: 'smooth', block: 'start' });
         burgerModal.classList.remove('is-active')
         burgerButton.classList.remove('is-active')
     };
