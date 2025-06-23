@@ -32,7 +32,7 @@ nav3.forEach(item => {
 
 nav4.forEach(item => {
     item.onclick = function() {
-        document.querySelector('.contacts').scrollIntoView({ behavior: 'smooth', block: 'end' });
+        document.querySelector('.contacts').scrollIntoView({ behavior: 'smooth', block: 'center' });
         burgerModal.classList.remove('is-active')
         burgerButton.classList.remove('is-active')
     };
