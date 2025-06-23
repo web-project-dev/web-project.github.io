@@ -1,0 +1,11 @@
+@use '../helpers/' as *;
+
+.overlay {
+    width: 100vw;
+    height: 100dvh;
+    max-height: 100vh;
+    background-color: #4949497e;
+    z-index: 60;
+    position: fixed;
+    display: none;
+}

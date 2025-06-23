@@ -7,7 +7,7 @@
     background-size: cover;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 50;
     box-shadow: rem(0) rem(4) rem(20) var(--box-shadow);
     display: flex;
     align-items: center;
@@ -28,10 +28,6 @@
         flex-direction: column;
         align-items: center;
         line-height: 1.1;
-
-        @include mobile-s {
-
-        }
 
         &-info {
             display: flex;
@@ -96,8 +92,18 @@
             background-color: var(--color-light);
             transition-duration: var(--transition-duration);
 
+            &.is-active {
+                opacity: 1; 
+                visibility: visible; 
+                transform: translateY(0);
+                transition: var(--transition-duration);
+            }
             &:not(.is-active) {
-                display: none;
+                opacity: 0; 
+                transition: var(--transition-duration);
+                visibility: hidden; 
+                transform: translateY(-650px); 
+
             }
         }
     }

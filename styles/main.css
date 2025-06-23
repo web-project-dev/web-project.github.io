@@ -198,7 +198,7 @@ svg * {
   --box-shadow: #7f7f7f;
   --container-width: 75rem;
   --container-padding-x: 1rem;
-  --transition-duration: 0.2s;
+  --transition-duration: 0.5s;
   --font-family-base: "Roboto Mono", monospace;
   --font-family-h: "Raleway", sans-serif;
   --font-family-weight: "Rubik", sans-serif;
@@ -377,7 +377,7 @@ button[aria-label]::before {
   background-size: cover;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 50;
   box-shadow: 0rem 0.25rem 1.25rem var(--box-shadow);
   display: flex;
   align-items: center;
@@ -461,8 +461,17 @@ button[aria-label]::before {
     background-color: var(--color-light);
     transition-duration: var(--transition-duration);
   }
+  .header__overlay.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: var(--transition-duration);
+  }
   .header__overlay:not(.is-active) {
-    display: none;
+    opacity: 0;
+    transition: var(--transition-duration);
+    visibility: hidden;
+    transform: translateY(-650px);
   }
 }
 
@@ -506,6 +515,16 @@ button[aria-label]::before {
   align-self: end;
 }
 
+.overlay {
+  width: 100vw;
+  height: 100dvh;
+  max-height: 100vh;
+  background-color: rgba(73, 73, 73, 0.4941176471);
+  z-index: 60;
+  position: fixed;
+  display: none;
+}
+
 .home .h2 {
   margin-block: 0;
 }
@@ -517,6 +536,17 @@ button[aria-label]::before {
 .home__information-certificate-img {
   margin-bottom: 2.5rem;
   align-self: center;
+}
+.home__information-certificate-img.is-active {
+  position: fixed;
+  max-height: 90%;
+  max-width: 80%;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .home__eldin {
   display: flex;
@@ -563,6 +593,15 @@ button[aria-label]::before {
   .services__container-info {
     flex-direction: column;
   }
+}
+.services__extra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services__extra p {
+  align-self: center;
+  text-align: center;
 }
 @media (width <= 30.06125rem) {
   .services__extra img {
