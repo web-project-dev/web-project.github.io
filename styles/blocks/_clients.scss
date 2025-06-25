@@ -25,10 +25,12 @@
                 flex-direction: column;
                 align-items: center;
                 padding: rem(25);
+                min-width: rem(300);
+                width: 30%;
+                gap: rem(15);
+                margin: rem(30);
 
                 img {
-                    height: rem(200);
-                    width: rem(350);
                     background-color: antiquewhite;
                 }
             }
