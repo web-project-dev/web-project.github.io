@@ -23,7 +23,10 @@
                 div {
                     height: 100%;
                     align-items: center;
-                    align-self: flex-start;
+                    
+                    @include mobile-s {
+                        align-self: flex-start;
+                    }
                 }
 
                 img {

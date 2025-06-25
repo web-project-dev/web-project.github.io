@@ -599,7 +599,11 @@ button[aria-label]::before {
 .services__container-info-row div {
   height: 100%;
   align-items: center;
-  align-self: flex-start;
+}
+@media (width <= 30.06125rem) {
+  .services__container-info-row div {
+    align-self: flex-start;
+  }
 }
 .services__container-info-row img {
   height: 12.5rem;
