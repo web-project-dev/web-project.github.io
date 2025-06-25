@@ -605,6 +605,11 @@ button[aria-label]::before {
   border-radius: 0.1875rem;
 }
 @media (width <= 30.06125rem) {
+  .services__container-info-row {
+    flex-direction: column;
+  }
+}
+@media (width <= 30.06125rem) {
   .services__container-info {
     flex-direction: column;
   }

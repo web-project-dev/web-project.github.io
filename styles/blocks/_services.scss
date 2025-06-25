@@ -29,6 +29,10 @@
                     height: rem(200);
                     border-radius: rem(3);
                 }
+
+                @include mobile-s {
+                    flex-direction: column;
+                }
             }
 
             @include mobile-s {
