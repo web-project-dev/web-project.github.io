@@ -4,29 +4,38 @@
 
     &__scroll {
         max-width: rem(1200);
-        width: 100%;
-        display: flex;
-        background-color: var(--color-gray-40);
-        padding: rem(20);
-        overflow-x: auto;
-        scrollbar-width: none; 
-        -ms-overflow-style: none; 
 
-        ::-webkit-scrollbar {
-            display: none; /* для Chrome, Safari, Opera */
+        
+        &__container {
+            width: 100%;
+            display: flex;
+            background-color: var(--color-gray-40);
+            padding: rem(20);
+            overflow-x: auto;
+            scrollbar-width: none; 
+            -ms-overflow-style: none; 
+
+            ::-webkit-scrollbar {
+                display: none; /* для Chrome, Safari, Opera */
+            }
+
+            &-item {
+                background-color: var(--color-light);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: rem(25);
+
+                img {
+                    height: rem(200);
+                    width: rem(350);
+                    background-color: antiquewhite;
+                }
+            }
         }
 
-        &-item {
-            background-color: var(--color-light);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            img {
-                height: rem(200);
-                width: rem(350);
-                background-color: antiquewhite;
-            }
+        @include mobile-s {
+            max-width: rem(300);
         }
     }
 }
