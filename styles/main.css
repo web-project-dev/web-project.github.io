@@ -585,9 +585,24 @@ button[aria-label]::before {
 }
 .services__container-info {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   width: 100%;
   align-items: center;
+  gap: 1.875rem;
+}
+.services__container-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 68%;
+}
+.services__container-info-row div {
+  height: 100%;
+  align-items: center;
+}
+.services__container-info-row img {
+  height: 12.5rem;
+  border-radius: 0.1875rem;
 }
 @media (width <= 30.06125rem) {
   .services__container-info {
@@ -609,8 +624,29 @@ button[aria-label]::before {
   }
 }
 
-.clients p {
-  align-self: center;
+.clients__scroll {
+  max-width: 75rem;
+  width: 100%;
+  display: flex;
+  background-color: var(--color-gray-40);
+  padding: 1.25rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.clients__scroll ::-webkit-scrollbar {
+  display: none; /* для Chrome, Safari, Opera */
+}
+.clients__scroll-item {
+  background-color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.clients__scroll-item img {
+  height: 12.5rem;
+  width: 21.875rem;
+  background-color: antiquewhite;
 }
 
 .partners {

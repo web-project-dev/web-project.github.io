@@ -2,7 +2,31 @@
 
 .clients {
 
-    p {
-        align-self: center;
+    &__scroll {
+        max-width: rem(1200);
+        width: 100%;
+        display: flex;
+        background-color: var(--color-gray-40);
+        padding: rem(20);
+        overflow-x: auto;
+        scrollbar-width: none; 
+        -ms-overflow-style: none; 
+
+        ::-webkit-scrollbar {
+            display: none; /* для Chrome, Safari, Opera */
+        }
+
+        &-item {
+            background-color: var(--color-light);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                height: rem(200);
+                width: rem(350);
+                background-color: antiquewhite;
+            }
+        }
     }
 }

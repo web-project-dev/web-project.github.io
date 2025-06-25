@@ -9,9 +9,27 @@
 
         &-info { 
             display: flex;
-            justify-content: space-evenly;
+            flex-direction: column;
             width: 100%;
             align-items: center;
+            gap: rem(30);
+
+            &-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 68%;
+
+                div {
+                    height: 100%;
+                    align-items: center;
+                }
+
+                img {
+                    height: rem(200);
+                    border-radius: rem(3);
+                }
+            }
 
             @include mobile-s {
                 flex-direction: column;
