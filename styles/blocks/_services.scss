@@ -23,6 +23,7 @@
                 div {
                     height: 100%;
                     align-items: center;
+                    align-self: flex-start;
                 }
 
                 img {
@@ -32,28 +33,21 @@
 
                 @include mobile-s {
                     flex-direction: column;
+                    gap: rem(20);
+                    margin-block: rem(15);
+                    width: 100%;
                 }
             }
 
             @include mobile-s {
                 flex-direction: column;
-            }
-        }
-    }
 
-    &__extra {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        p {
-            align-self: center;
-            text-align: center;
-        }
-
-        @include mobile-s {
-            img {
-                max-width: rem(200);
+                &:nth-child(2n) {
+                    
+                    div {
+                        order: -1;
+                    }
+                }
             }
         }
     }

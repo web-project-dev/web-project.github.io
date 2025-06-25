@@ -599,6 +599,7 @@ button[aria-label]::before {
 .services__container-info-row div {
   height: 100%;
   align-items: center;
+  align-self: flex-start;
 }
 .services__container-info-row img {
   height: 12.5rem;
@@ -607,25 +608,17 @@ button[aria-label]::before {
 @media (width <= 30.06125rem) {
   .services__container-info-row {
     flex-direction: column;
+    gap: 1.25rem;
+    margin-block: 0.9375rem;
+    width: 100%;
   }
 }
 @media (width <= 30.06125rem) {
   .services__container-info {
     flex-direction: column;
   }
-}
-.services__extra {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.services__extra p {
-  align-self: center;
-  text-align: center;
-}
-@media (width <= 30.06125rem) {
-  .services__extra img {
-    max-width: 12.5rem;
+  .services__container-info:nth-child(2n) div {
+    order: -1;
   }
 }
 
