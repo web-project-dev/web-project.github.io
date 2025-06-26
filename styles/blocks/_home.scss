@@ -18,13 +18,16 @@
             &.is-active {
                 position: fixed;
                 max-height: 90%;
-                max-width: 80%;
-                width: 100%;
+                width: 60%;
                 top: 0;
                 z-index: 100;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+
+                @include mobile-s {
+                    width: 95%;
+                }
             }
         }
     }

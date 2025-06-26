@@ -71,8 +71,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-    @include fluid-text(20, 14) ;
-    color: var(--color-gray-10);
+    @include fluid-text(20, 16) ;
     font-weight: 400;
     text-align: center;
     font-family: var(--font-family-base);

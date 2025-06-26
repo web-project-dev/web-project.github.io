@@ -14,6 +14,8 @@
             overflow-x: auto;
             scrollbar-width: none; 
             -ms-overflow-style: none; 
+            border: rem(4) solid var(--color-gray-40);
+            border-radius: rem(20);
 
             ::-webkit-scrollbar {
                 display: none; /* для Chrome, Safari, Opera */
@@ -25,13 +27,21 @@
                 flex-direction: column;
                 align-items: center;
                 padding: rem(25);
-                min-width: rem(300);
+                min-width: rem(325);
                 width: 30%;
                 gap: rem(15);
-                margin: rem(30);
+                margin: rem(15);
+                border-radius: rem(20);
+
+                div {
+                    width: rem(300);
+                    height: rem(200);
+                }
 
                 img {
-                    background-color: antiquewhite;
+                    object-fit: cover;
+                    width: rem(300);
+                    height: rem(200);
                 }
             }
         }
