@@ -4,12 +4,19 @@
     --color-light: #ffffff;
     --color-dark: #494949;
 
-    --color-accent: #015198;
+    --color-accent: #0063bb;
     --color-black-accent: #202020;
     --color-gray: #727272;
     --color-gray-10: #a0a0a0;
     --color-gray-20: #c0c0c0;
     --color-gray-40: #e8e8e8;
+
+    --color-black-bright: #00000052;
+    --color-black-bright-10: #000000b0;
+
+    --color-animated-1: #4d9eff;
+    --color-animated-2: #005cc5;
+    --color-animated-3: #78b6ff;
 
     --border: #{rem(1)} solid var(--color-dark-15);
 
@@ -20,9 +27,9 @@
 
     --transition-duration: 0.5s;
 
-    --font-family-base: "Roboto Mono", monospace;
+    // --font-family-base: "Roboto Mono", monospace;
     --font-family-h: "Raleway", sans-serif;;
-    --font-family-weight: "Rubik", sans-serif;
+    --font-family-base: "Montserrat", sans-serif;
 
     @include laptop {
         --container-width: #{rem(1280)};

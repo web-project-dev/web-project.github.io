@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="overlay"></div>
@@ -19,12 +19,9 @@
             <img href="" src="img/header/logo.png" alt="">
         </a> 
         <div class="header__overlay" data-js-overlay>
-            <div class="header__overlay-info">
-                <a href='https://api.whatsapp.com/send/?phone=78432125403&text&type=phone_number&app_absent=0' class="header__overlay-number">+7 843 212-54-03</a>
-                <a class="header__overlay-e-mail">energo.alekseev@yandex.ru</a>
-            </div>
             <nav class="header__overlay__nav">
                 <a class="overlay__nav__item nav-home">ГЛАВНАЯ</a>
+                <a class="overlay__nav__item nav-about">О НАС</a>
                 <a class="overlay__nav__item nav-services">УСЛУГИ</a>
                 <a class="overlay__nav__item nav-clients">НАШИ КЛИЕНТЫ</a>
                 <a class="overlay__nav__item nav-contacts">КОНТАКТЫ</a>
@@ -37,10 +34,10 @@
         </button>
     </header>
     <main>
+        <h1 class="seamless-gradient-text">Ремонт промышленного <br> оборудования 
+    и электродвигателей</h1>
         <section class="home container">
             <h2 class="h2">Мы предлагаем</h2>
-            <h3 class="h3">Ремонт промышленного <br> оборудования 
-    и электродвигателей</h3>
             <div class="home">
                 <div class="home__information">
                     <p>Фирма была образована в декабре 1998 года</p>
@@ -63,104 +60,129 @@
             <div class="services__container container">
                 <h2 class="h2">Услуги</h2>
                 <div class="services__container-info">
-                    <div class="services__container-info-row">
-                        <div>
-                            <p>
-                                <b>Ремонт электродвигателей:</b><br>
-                                - ремонт электродвигателей иностранного производства<br>
-                                - ремонт крановых, лифтовых<br>
-                                - ремонт однофазных и трехфазных асинхронных электродвигателей<br>
-                                - ремонт взрывозащищенных  электродвигателей<br>
-                                - ремонт электродвигателей постоянного тока<br>
-                                - многоскоростных электродвигателей<br>
-                            </p>
-                        </div>
-                        <img src="img/services/services-1.png" alt="">
-                    </div>
-                    <div class="services__container-info-row">
-                        <img src="img/services/services-2.png" alt="">
-                        <div>
-                            <p>
-                                <b>Ремонт трансформаторов:</b><br>
-                                - ремонт сварочных трансформаторов и сварочных аппаратов<br>
-                                - ремонт понижающих и повышающих трансформаторов
-                            </p>
-                        </div>
-                    </div>
-                    <div class="services__container-info-row">
-                        <div>
-                            <p>
-                                <b>Ремонт генераторов:</b><br>
-                                - ремонт сварочных генераторов<br>
-                                - ремонт стационарных генераторов<br>
-                                - ремонт мобильных генераторов<br>
-                                - ремонт генераторов постоянного тока<br>
-                                - ремонт высокочастотных генераторов
-                            </p>
-                        </div>
-                        <img src="img/services/services-3.png" alt="">
-                    </div>
-                    <div class="services__container-info-row">
-                        <img src="img/services/services-4.png" height="200" alt="">
-                        <div>
-                            <p>
-                                <b>Ремонт гидротолкателей</b><br>
-                                <b>Ремонт электронасосов:</b> 
-                                Гном, НЦ, НПК и др.;<br>
-                                &nbsp;Грундфос (Grundfos);<br>
-                                &nbsp;Вилла (Villa);<br>
-                                &nbsp;Джилекс и др.
-                            </p>
-                        </div>
-                    </div>
+                    <ul class="services__container-info-list">
+                        <li class="services__container-info-item">
+                            <img src="./img/services/services-1.png" width="250" height="250" alt="">
+                            <ul>
+                                <li>
+                                    ремонт электродвигателей иностранного производства
+                                </li>
+                                <li>
+                                    ремонт крановых, лифтовых
+                                </li>
+                                <li>
+                                    ремонт однофазных и трехфазных асинхронных электродвигателей
+                                </li>
+                                <li>
+                                    ремонт взрывозащищенных  электродвигателей
+                                </li>
+                                <li>
+                                    ремонт электродвигателей постоянного тока
+                                </li>
+                                <li>
+                                    многоскоростных электродвигателей
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="services__container-info-item">
+                            <img src="./img/services/services-2.png" width="250" height="250" alt="">
+                            <ul>
+                                <li>
+                                    ремонт сварочных трансформаторов и сварочных аппаратов
+                                </li>
+                                <li>
+                                    ремонт понижающих и повышающих трансформаторов
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="services__container-info-item">
+                            <img src="./img/services/services-3.png" width="250" height="250" alt="">
+                            <ul>
+                                <li>
+                                    ремонт сварочных генераторов
+                                </li>
+                                <li>
+                                    ремонт стационарных генераторов
+                                </li>
+                                <li>
+                                    ремонт мобильных генераторов
+                                </li>
+                                <li>
+                                    ремонт генераторов постоянного тока
+                                </li>
+                                <li>
+                                    ремонт высокочастотных генераторов
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="services__container-info-item">
+                            <img src="./img/services/services-4.png" width="250" height="250" alt="">
+                            <ul>
+                                <li>
+                                    Гном, НЦ, НПК и др.
+                                </li>
+                                <li>
+                                    Грундфос (Grundfos);
+                                </li>
+                                <li>
+                                    Вилла (Villa);
+                                </li>
+                                <li>
+                                    Джилекс и др.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
-        <section class="clients container">
-            <h2 class="h2">Наши клиенты</h2>
-            <div class="clients__scroll">
-                <ul class="clients__scroll__container dragscroll">
-                    <li class="clients__scroll__container-item">
-                        <h3 class="h3"><b>АО "Татхимфармпрепараты"</b></h3>
-                        <div>
-                            <img src="./img/clients/clients-1.jpg" alt="">
-                        </div>
-                        <p>АО «Татхимфармпрепараты» входит в ТОП-20 крупнейших производителей лекарственных препаратов в России и является одним из лидеров по выпуску таблетированных препаратов.</p>
-                    </li>
-                    <li class="clients__scroll__container-item">
-                        <h3 class="h3"><b>АО "Аромат"</b></h3>
-                        <div>
-                            <img src="./img/clients/clients-2.jpg" alt="">
-                        </div>
-                        <p>Парфюмерно-косметическая фабрика "Аромат" является одним из крупнейших производителей на рынке косметики России, мощностью более 50 миллионов единиц продукции в год.</p>
-                    </li>
-                    <li class="clients__scroll__container-item">
-                        <h3 class="h3"><b>ООО "ПАЛП Инвест"</b></h3>
-                        <div>
-                            <img src="./img/clients/clients-3.jpg" alt="">
-                        </div>
-                        <p>ПАЛП Инвест – российский производитель бумаги санитарно-гигиенического назначения и изделий тиссью в России. Компания входит в топ-8 лидеров  российского рынка целлюлозно-бумажной продукции по версии Forbes.</p>
-                    </li>
-                    <li class="clients__scroll__container-item">
-                        <h3 class="h3"><b>ООО ТК "Майский"</b></h3>
-                        <div>
-                            <img src="./img/clients/clients-4.webp" alt="">
-                        </div>
-                        <p>Тепличный комбинат «Майский» Республика Татарстан был организован в 1974 году с главной задачей обеспечение населения РТ и крупных промышленных центров России свежей овощной продукцией.</p>
-                    </li>
-                    <li class="clients__scroll__container-item">
-                        <h3 class="h3"><b>ООО "Данафлекс НАНО"</b></h3>
-                        <div>
-                            <img src="./img/clients/clients-5.webp" alt="">
-                        </div>
-                        <p>компания Danaflex производит гибкую упаковку и пленочные материалы с печатью</p>
-                    </li>
-                </ul>
+        <section class="clients-container">
+            <div class="clients container">
+                <h2 class="h2 alone">Наши клиенты</h2>
+                <div class="clients__scroll">
+                    <ul class="clients__scroll__container dragscroll">
+                        <li class="clients__scroll__container-item">
+                            <h3 class="h3"><b>АО "Татхимфармпрепараты"</b></h3>
+                            <div>
+                                <img src="./img/clients/clients-1.jpg" alt="">
+                            </div>
+                            <p>АО «Татхимфармпрепараты» входит в ТОП-20 крупнейших производителей лекарственных препаратов в России и является одним из лидеров по выпуску таблетированных препаратов.</p>
+                        </li>
+                        <li class="clients__scroll__container-item">
+                            <h3 class="h3"><b>АО "Аромат"</b></h3>
+                            <div>
+                                <img src="./img/clients/clients-2.jpg" alt="">
+                            </div>
+                            <p>Парфюмерно-косметическая фабрика "Аромат" является одним из крупнейших производителей на рынке косметики России, мощностью более 50 миллионов единиц продукции в год.</p>
+                        </li>
+                        <li class="clients__scroll__container-item">
+                            <h3 class="h3"><b>ООО "ПАЛП Инвест"</b></h3>
+                            <div>
+                                <img src="./img/clients/clients-3.jpg" alt="">
+                            </div>
+                            <p>ПАЛП Инвест – российский производитель бумаги санитарно-гигиенического назначения и изделий тиссью в России. Компания входит в топ-8 лидеров  российского рынка целлюлозно-бумажной продукции по версии Forbes.</p>
+                        </li>
+                        <li class="clients__scroll__container-item">
+                            <h3 class="h3"><b>ООО ТК "Майский"</b></h3>
+                            <div>
+                                <img src="./img/clients/clients-4.webp" alt="">
+                            </div>
+                            <p>Тепличный комбинат «Майский» Республика Татарстан был организован в 1974 году с главной задачей обеспечение населения РТ и крупных промышленных центров России свежей овощной продукцией.</p>
+                        </li>
+                        <li class="clients__scroll__container-item">
+                            <h3 class="h3"><b>ООО "Данафлекс НАНО"</b></h3>
+                            <div>
+                                <img src="./img/clients/clients-5.webp" alt="">
+                            </div>
+                            <p>компания Danaflex производит гибкую упаковку и пленочные материалы с печатью</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section class="partners">
             <div class="partners__container container">
-                <h2 class="h2">Наши партнёры</h2>
+                <h2 class="h2 alone">Наши партнёры</h2>
                 <div class="partners__container-images">
                     <img src="img/partners/part1.jpg" alt="">
                     <img src="img/partners/part2.jpg" alt="">
@@ -170,7 +192,7 @@
             </div>
         </section>
         <section class="contacts container">
-            <h1 class="h2">Контакты</h1>
+            <h2 class="h2">Контакты</h2>
             <div class="contacts__information">
                 <p>Адрес: 420095, Республика Татарстан, г. Казань, ул. Восстания, 100, корп.5300 <br>
 Телефон: +7 (843)212-54-03 <br>

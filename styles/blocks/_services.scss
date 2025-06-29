@@ -1,56 +1,37 @@
 @use '../helpers/' as *;
 
 .services {
-    background-color: var(--color-gray-40);
     padding-bottom: rem(20);
-    border-bottom: 2px solid var(--color-gray-10);
 
     &__container {
 
         &-info { 
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            align-items: center;
-            gap: rem(30);
 
-            &-row {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 68%;
-                padding-bottom: rem(20);
-
-                div {
-                    height: 100%;
-                    align-items: center;
-                    
-                    @include mobile-s {
-                        align-self: flex-start;
-                    }
-                }
-
-                img {
-                    height: rem(200);
-                    border-radius: rem(3);
-                }
-
+            &-list {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                width: 100%;
+                gap: rem(40); 
+                
                 @include mobile-s {
-                    flex-direction: column;
-                    gap: rem(20);
-                    margin-block: rem(15);
-                    width: 100%;
+                    grid-template-columns: 1fr;
                 }
             }
 
-            @include mobile-s {
+            &-item {
+                display: flex;
                 flex-direction: column;
 
-                &:nth-child(2n) {
-                    
-                    div {
-                        order: -1;
-                    }
+                img {
+                    margin-bottom: rem(20);
+                }
+
+                ul {
+                    align-self: flex-start;
+                }
+
+                @include mobile-s {
+                    align-items: center;
                 }
             }
         }

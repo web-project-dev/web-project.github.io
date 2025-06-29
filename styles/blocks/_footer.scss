@@ -3,9 +3,9 @@
 .footer {
     display: flex;
     flex-direction: column;
-    background-color: var(--color-gray-20);
-    border-top: 2px solid var(--color-gray);
+    background-color: var(--color-black-accent);
     padding-top: rem(60);
+    color: var(--color-light);
 
     .container {
         box-shadow: none;
@@ -27,6 +27,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            font-size: fluid(16, 13);
         }
 
         &-soc1als {

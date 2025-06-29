@@ -1,0 +1,18 @@
+@use '../helpers/' as *;
+
+.seamless-gradient-text {
+  background: linear-gradient(90deg, 
+    var(--color-animated-1), var(--color-animated-2), var(--color-animated-3), var(--color-animated-1), var(--color-animated-2), var(--color-animated-3), var(--color-animated-1), var(--color-animated-2), var(--color-animated-3), var(--color-animated-1), var(--color-animated-2), var(--color-animated-3), var(--color-animated-1), var(--color-animated-2), var(--color-animated-3), var(--color-animated-1), var(--color-animated-2), var(--color-animated-3), var(--color-animated-1), var(--color-animated-2), var(--color-animated-3), var(--color-animated-1), var(--color-animated-2), var(--color-animated-3), var(--color-animated-1), var(--color-animated-2), var(--color-animated-3), var(--color-animated-1), var(--color-animated-2), var(--color-animated-3), var(--color-animated-2));
+  background-size: 1100% 500%; 
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  animation: seamless-flow 30s linear infinite;
+  margin-block: rem(40) rem(80);
+  text-align: center;
+}
+
+@keyframes seamless-flow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}

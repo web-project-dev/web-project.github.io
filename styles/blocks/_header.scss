@@ -1,19 +1,17 @@
 @use '../helpers/' as *;
 
 .header {
-    background-image: url('../img/header/bg.png');
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-size: cover;
+    background-color: var(--color-black-bright-10);
     position: sticky;
     top: 0;
     z-index: 50;
-    box-shadow: rem(0) rem(4) rem(20) var(--box-shadow);
+    box-shadow: rem(0) rem(2) rem(15) var(--color-black-accent);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-block: rem(15);
     padding-inline: rem(50);
+    color: var(--color-light);
 
     @include tablet {
         padding-inline: rem(35);
@@ -29,46 +27,15 @@
         align-items: center;
         line-height: 1.1;
 
-        &-info {
-            display: flex;
-            border-bottom: 2px solid var(--color-dark);
-            color: var(--color-black-accent);
-            width: 100%;
-            justify-content: space-between;
-            padding-bottom: rem(15);
-            align-items: center;
-
-            :first-child {
-                font-size: fluid(27, 21);
-            }
-
-            :last-child {
-                font-size: fluid(21, 17);
-            }
-
-            @include mobile-s {
-                border-bottom: none;
-                justify-content: center;
-                flex-direction: column;
-                gap: rem(15);
-                
-            }
-        }
-
-        &-text {
-            color: var(--color-black-accent);
-        }
-
         &__nav {
             display: flex;
             align-items: center;
-            font-size: fluid(20, 15);
-            margin-top: rem(15);
-            font-family: var(--font-family-weight);
+            font-size: fluid(18, 14);
+            font-family: var(--font-family-base);
             font-weight: 500;
 
             :not(:last-child) {
-                margin-right: rem(55);
+                margin-right: rem(40);
 
                 @include mobile-s {
                     margin-right: 0;
@@ -82,6 +49,7 @@
         }
 
         @include mobile {
+            color: var(--color-black-accent);
             position: fixed;
             inset: 0;
             padding: 1rem;
