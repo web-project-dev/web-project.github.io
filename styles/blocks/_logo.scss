@@ -2,7 +2,8 @@
 
 
 .logo {
-        
+    width: rem(300);  
+    
     @include mobile-s {
         width: rem(230);
     }

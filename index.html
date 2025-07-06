@@ -14,48 +14,47 @@
 </head>
 <body>
     <div class="overlay"></div>
-    <header class="header" data-js-header>
-         <a href="" class="logo">
-            <img href="" src="img/header/logo.png" alt="">
-        </a> 
-        <div class="header__overlay" data-js-overlay>
-            <nav class="header__overlay__nav">
-                <a class="overlay__nav__item nav-home">ГЛАВНАЯ</a>
-                <a class="overlay__nav__item nav-about">О НАС</a>
-                <a class="overlay__nav__item nav-services">УСЛУГИ</a>
-                <a class="overlay__nav__item nav-clients">НАШИ КЛИЕНТЫ</a>
-                <a class="overlay__nav__item nav-contacts">КОНТАКТЫ</a>
-            </nav>
+    <header class="header-container">
+        <div class="header container" data-js-header>
+            <a href="" class="logo">
+                <img href="" src="img/header/logo.png" alt="">
+            </a> 
+            <div class="header__overlay" data-js-overlay>
+                <nav class="header__overlay__nav">
+                    <a class="overlay__nav__item nav-services">УСЛУГИ</a>
+                    <a class="overlay__nav__item nav-home">О НАС</a>
+                    <a class="overlay__nav__item nav-clients">НАШИ КЛИЕНТЫ</a>
+                    <a class="overlay__nav__item nav-contacts">КОНТАКТЫ</a>
+                </nav>
+            </div>
+            <button class="header__burger-button burger-button visible-mobile" data-js-burger-button type="button" aria-label="Open-menu" title="Open-menu">
+                <span class="burger-button__line"></span>
+                <span class="burger-button__line"></span>
+                <span class="burger-button__line"></span>
+            </button>
         </div>
-        <button class="header__burger-button burger-button visible-mobile" data-js-burger-button type="button" aria-label="Open-menu" title="Open-menu">
-            <span class="burger-button__line"></span>
-            <span class="burger-button__line"></span>
-            <span class="burger-button__line"></span>
-        </button>
     </header>
     <main>
-        <h1 class="seamless-gradient-text">Ремонт промышленного <br> оборудования 
-    и электродвигателей</h1>
-        <section class="home container">
-            <h2 class="h2">Мы предлагаем</h2>
-            <div class="home">
-                <div class="home__information">
-                    <p>Фирма была образована в декабре 1998 года</p>
-                    <p>Если Вас интересуют цены на ремонт электродвигателей, отправьте, пожалуйста, заявку с номиналами ваших двигателей которые Вам необходимо перемотать. И мы в короткое время обязательно свяжемся с Вами и сообщим о ценах на ремонт и сроках проведения ремонта двигателей согласно Вашей заявке.</p>
-                    <img class="home__information-certificate-img" src="img/home/certificate.png" width="400" alt="">
-                    <div class="home__eldin">
-                        <div class="home__eldin-logo">
-                            <p><b>Сервисный центр ОАО</b></p>
-                            <img src="img/home/eldin.gif" width="200" alt="">
-                            <p><b>тел.: +7 (4852) 8-00-00</b></p>
-                        </div>
-                        <div class="home__eldin-text">
-                            <p>А так же мы единственные в Казани кто является сервисным центром ОАО «ELDIN», обслуживаем продукцию Ярославского электромашиностроительного завода.</p>
-                        </div>
-                    </div>
+        <section class="hero">
+            <div class="hero__slider">
+                <ul class="hero__slider-list">
+                    <li class="hero__slider-1">
+                        <img src="img/clients/bg.png" alt="">
+                    </li>
+                    <li class="hero__slider-2">
+                        <img src="img/clients/clients-1.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="hero__text">
+                <div class="hero__text-container container">
+                    <p>Ремонт промышленного оборудования 
+и электродвигателей <span>+7 (4852) 8-00-00</span></p>
                 </div>
             </div>
         </section>
+        <h1 class="seamless-gradient-text">Ремонт промышленного <br> оборудования 
+    и электродвигателей</h1>
         <section class="services">
             <div class="services__container container">
                 <h2 class="h2">Услуги</h2>
@@ -136,6 +135,37 @@
                 </div>
             </div>
         </section>
+        <section class="home container">
+            <h2 class="h2">О нас</h2>
+            <div class="home">
+                <div class="home__information">
+                    <p>
+                        Наша фирма работает с декабря 1998 года и вот уже много лет мы занимаемся профессиональным ремонтом промышленного оборудования и электродвигателей. Мы команда профессионалов любящая свое дело и готовая предложить вам лучшее обслуживание за лучшую цену. В нашей работе мы делаем упор на качество и скорость нашей работы, и все для того, чтобы ваше оборудование прослужило вам как можно дольше.
+                    </p>
+                    <ul>
+                        <b>Мы предлагаем</b>
+                        <li>Ремонт электродвигателей </li>
+                        <li>Ремонт трансформаторов </li>
+                        <li>Ремонт генераторов</li>
+                        <li>Ремонт гидротолкателей</li>
+                    </ul>
+                    <p>Мы работаем с организациями и физическими лицами. Наш огромный опыт и любовь к делу позволяет нам браться за любую даже самую сложную задачу</p>
+                    <p>Свяжитесь с нами прямо сейчас и мы обсудим ваш проект!</p>
+                    <p>Наш номер телефона ( )</p>
+                    <img class="home__information-certificate-img" src="img/home/certificate.png" width="400" alt="">
+                    <div class="home__eldin">
+                        <div class="home__eldin-logo">
+                            <p><b>Сервисный центр ОАО</b></p>
+                            <img src="img/home/eldin.gif" width="200" alt="">
+                            <p><b>тел.: +7 (4852) 8-00-00</b></p>
+                        </div>
+                        <div class="home__eldin-text">
+                            <p>А так же мы единственные в Казани кто является сервисным центром ОАО «ELDIN», обслуживаем продукцию Ярославского электромашиностроительного завода.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="clients-container">
             <div class="clients container">
                 <h2 class="h2 alone">Наши клиенты</h2>
@@ -180,17 +210,6 @@
                 </div>
             </div>
         </section>
-        <section class="partners">
-            <div class="partners__container container">
-                <h2 class="h2 alone">Наши партнёры</h2>
-                <div class="partners__container-images">
-                    <img src="img/partners/part1.jpg" alt="">
-                    <img src="img/partners/part2.jpg" alt="">
-                    <img src="img/partners/part4.jpg" alt="">
-                    <img src="img/partners/part3.jpg" alt="">
-                </div>
-            </div>
-        </section>
         <section class="contacts container">
             <h2 class="h2">Контакты</h2>
             <div class="contacts__information">
@@ -209,8 +228,8 @@ E-mail: energo.alekseev@yandex.ru</p>
                 <img src="img/header/logo.png" alt="">
             </div>
             <div class="footer__info-nav">
-                <a class="footer-info-nav-item nav-home">ГЛАВНАЯ</a>
                 <a class="footer-info-nav-item nav-services">УСЛУГИ</a>
+                <a class="footer-info-nav-item nav-home">О НАС</a>
                 <a class="footer-info-nav-item nav-clients">НАШИ КЛИЕНТЫ</a>
                 <a class="footer-info-nav-item nav-contacts">КОНТАКТЫ</a>
             </div>

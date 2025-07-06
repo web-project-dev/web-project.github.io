@@ -16,6 +16,7 @@
         grid-template-columns: repeat(3, 1fr);
         border-bottom: 2px solid var(--color-gray-10);
         padding-bottom: rem(15);
+        align-items: center;
 
         @include mobile-s {
             display: flex;
