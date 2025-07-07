@@ -640,6 +640,12 @@ button[aria-label]::before {
 }
 .home__information ul {
   margin-left: 3.125rem;
+  margin-top: 0;
+}
+@media (width <= 30.06125rem) {
+  .home__information ul {
+    margin-left: 0.625rem;
+  }
 }
 .home__information ul li {
   margin-left: 1.875rem;
@@ -775,6 +781,9 @@ button[aria-label]::before {
   gap: 0.9375rem;
   margin: 0.9375rem;
   border-radius: 1.25rem;
+}
+.clients__scroll__container-item h3 {
+  height: 2.8125rem;
 }
 .clients__scroll__container-item div {
   width: 18.75rem;

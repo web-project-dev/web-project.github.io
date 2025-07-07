@@ -14,6 +14,11 @@
 
         ul {
             margin-left: rem(50);
+            margin-top: 0;
+
+            @include mobile-s {
+                margin-left: rem(10);
+            }
 
             li {
                 margin-left: rem(30);
