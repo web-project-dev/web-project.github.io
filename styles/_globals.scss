@@ -58,6 +58,10 @@ li:where(:not([class])) {
   }
 }
 
+.blue {
+    color: var(--color-accent);
+}
+
 h1, .h1,
 h2, .h2,
 h3, .h3,

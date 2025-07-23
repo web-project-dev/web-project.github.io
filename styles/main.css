@@ -295,6 +295,10 @@ li:where(:not([class]))::before {
   margin-bottom: 0.375rem;
 }
 
+.blue {
+  color: var(--color-accent);
+}
+
 h1, .h1,
 h2, .h2,
 h3, .h3,
@@ -544,8 +548,8 @@ button[aria-label]::before {
 }
 
 .hero {
-  height: 60vh;
-  max-height: 60dvh;
+  height: 65vh;
+  max-height: 65dvh;
   width: 100vw;
   position: relative;
   overflow: hidden;
@@ -650,6 +654,9 @@ button[aria-label]::before {
 .home__information ul li {
   margin-left: 1.875rem;
   line-height: 2;
+}
+.home__information a {
+  font-size: clamp(1rem, 0.9203431373rem + 0.3267973856vw, 1.3125rem);
 }
 .home__information-certificate-img {
   margin-bottom: 2.5rem;
