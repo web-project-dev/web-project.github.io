@@ -57,9 +57,18 @@
     padding-block: rem(20);
 
     &-container {
-      
+      display: flex;
+ 
+      :not(:last-child) {
+        margin-right: rem(20);
+      }
+
       span {
         font-size: fluid(23, 17);
+      }
+
+      p {
+        margin: 0;
       }
     }
   }

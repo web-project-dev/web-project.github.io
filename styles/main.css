@@ -224,8 +224,7 @@ svg * {
   border: 0 !important;
   padding: 0 !important;
   white-space: nowrap !important;
-  -webkit-clip-path: inset(100%) !important;
-          clip-path: inset(100%) !important;
+  clip-path: inset(100%) !important;
   clip: rect(0 0 0 0) !important;
   overflow: hidden !important;
 }
@@ -598,8 +597,17 @@ button[aria-label]::before {
   color: var(--color-light);
   padding-block: 1.25rem;
 }
+.hero__text-container {
+  display: flex;
+}
+.hero__text-container :not(:last-child) {
+  margin-right: 1.25rem;
+}
 .hero__text-container span {
   font-size: clamp(1.0625rem, 0.9669117647rem + 0.3921568627vw, 1.4375rem);
+}
+.hero__text-container p {
+  margin: 0;
 }
 
 .seamless-gradient-text {
