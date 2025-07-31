@@ -767,6 +767,11 @@ button[aria-label]::before {
   -o-object-fit: contain;
      object-fit: contain;
 }
+@media (width <= 30.06125rem) {
+  .services-models__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 .clients {
   z-index: 15;
