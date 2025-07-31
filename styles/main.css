@@ -609,6 +609,11 @@ button[aria-label]::before {
 .hero__text-container p {
   margin: 0;
 }
+@media (width <= 30.06125rem) {
+  .hero__text-container {
+    flex-direction: column;
+  }
+}
 
 .seamless-gradient-text {
   background: linear-gradient(90deg, var(--color-animated-1), var(--color-animated-2), var(--color-animated-3), var(--color-animated-1), var(--color-animated-2), var(--color-animated-3), var(--color-animated-1), var(--color-animated-2), var(--color-animated-3), var(--color-animated-1), var(--color-animated-2), var(--color-animated-3), var(--color-animated-1), var(--color-animated-2), var(--color-animated-3), var(--color-animated-1), var(--color-animated-2), var(--color-animated-3), var(--color-animated-1), var(--color-animated-2), var(--color-animated-3), var(--color-animated-1), var(--color-animated-2), var(--color-animated-3), var(--color-animated-1), var(--color-animated-2), var(--color-animated-3), var(--color-animated-1), var(--color-animated-2), var(--color-animated-3), var(--color-animated-2));
@@ -739,6 +744,30 @@ button[aria-label]::before {
   }
 }
 
+.services-models__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem 0.875rem;
+}
+.services-models__list-item {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  border: 0.0625rem solid var(--color-gray-20);
+  transition: 0.2s;
+}
+.services-models__list-item:hover {
+  transform: scale(1.1);
+}
+.services-models__list-item img {
+  max-width: 15.625rem;
+  width: 100%;
+  max-height: 15.625rem;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .clients {
   z-index: 15;
   position: relative;
@@ -839,6 +868,8 @@ button[aria-label]::before {
   background-color: var(--color-black-accent);
   padding-top: 3.75rem;
   color: var(--color-light);
+  bottom: 0;
+  position: relative;
 }
 .footer .container {
   box-shadow: none;

@@ -1,0 +1,30 @@
+@use '../helpers/' as *;
+
+.services-models {
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: rem(20) rem(14);
+
+        &-item {
+            padding: rem(20);
+            display: flex;
+            flex-direction: column;
+            border: rem(1) solid var(--color-gray-20);
+            transition: 0.2s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            img {
+                max-width: rem(250);
+                width: 100%;
+                max-height: rem(250);
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}

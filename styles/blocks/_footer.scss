@@ -6,6 +6,8 @@
     background-color: var(--color-black-accent);
     padding-top: rem(60);
     color: var(--color-light);
+    bottom: 0;
+    position: relative;
 
     .container {
         box-shadow: none;
