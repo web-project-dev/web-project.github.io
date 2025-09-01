@@ -725,7 +725,8 @@ button[aria-label]::before {
 }
 @media (width <= 30.06125rem) {
   .services__container-info-list {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 }
 .services__container-info-item {
