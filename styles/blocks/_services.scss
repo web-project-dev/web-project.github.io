@@ -8,8 +8,7 @@
         &-info { 
 
             &-list {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
+                display: flex;
                 width: 100%;
                 gap: rem(40); 
                 
@@ -22,6 +21,7 @@
             &-item {
                 display: flex;
                 flex-direction: column;
+                width: calc(25% - rem(40));
 
                 img {
                     margin-bottom: rem(20);
@@ -33,6 +33,7 @@
 
                 @include mobile-s {
                     align-items: center;
+                    width: 100%;
                 }
             }
         }
