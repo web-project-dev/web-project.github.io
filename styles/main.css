@@ -1003,6 +1003,7 @@ button[aria-label]::before {
 @media (width <= 32.56125rem) {
   .hero__body h1 {
     margin-block: 0.625rem;
+    white-space: pre-line;
   }
 }
 @media (width <= 32.56125rem) {

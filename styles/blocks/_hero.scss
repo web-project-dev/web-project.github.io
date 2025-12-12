@@ -43,6 +43,7 @@
 
             @include mobile-s {
                 margin-block: rem(10);
+                white-space: pre-line;
             }
         }
 
