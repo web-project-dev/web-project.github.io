@@ -3,270 +3,1283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="">
-    <title>Энергоспецремонт</title>
-    <link rel="stylesheet" href="./styles/main.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css">
     <script src="./scripts/main.js" type="module" defer></script>
+    <script src="./scripts/stars.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="overlay"></div>
-    <header class="header-container">
-        <div class="header container" data-js-header>
-            <a href="" class="logo">
-                <img href="" src="img/header/logo.png" alt="">
-            </a> 
-            <div class="header__overlay" data-js-overlay>
-                <nav class="header__overlay__nav">
-                    <a class="overlay__nav__item nav-services">УСЛУГИ</a>
-                    <a class="overlay__nav__item nav-home">О НАС</a>
-                    <a class="overlay__nav__item nav-clients">НАШИ КЛИЕНТЫ</a>
-                    <a class="overlay__nav__item nav-contacts">КОНТАКТЫ</a>
-                </nav>
+<body data-js-body>
+    <div class="overlay" data-js-overlay></div>
+    <div class="form-container" data-js-form>
+        <button class="form-container__close-button" data-js-close-form>⨉</button>
+        <h2 class="h5">Заказать сайт</h2>
+        <form>
+            <input class="form-container__item-name" name="name" type="name" placeholder="Ваше имя">
+            <input class="form-container__item-phone" name="phone" type="phone" placeholder="Ваш телефон">
+            <input class="form-container__item-topic" name="topic" type="topic" placeholder="Тема проекта">
+            <button class="submit-button" type="submit">Связаться</button>
+        </form>
+    </div>
+    <header class="header" data-js-header>
+        <div class="header__body">
+            <div class="header__body-inner">
+                <a href="/" class="header__logo logo" title="home" aria-label="Home" >
+                    logo
+                </a>
+                <div class="header__overlay" data-js-overlay>
+                    <nav class="header__menu">
+                        <ul class="header__menu-list">
+                            <li class="header__menu_item">
+                                <a href="/" class="header__menu-link">Главная</a>
+                            </li>
+                            <li class="header__menu_item">
+                                <a href="/" class="header__menu-link">Этапы работы</a>
+                            </li>
+                            <li class="header__menu_item">
+                                <a href="/" class="header__menu-link">Тарифы</a>
+                            </li>
+                            <li class="header__menu_item">
+                                <a href="/" class="header__menu-link">Отзывы</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button href="" class="header__contact-us-link button button-accent" data-js-applications>Связяться</button>
+                </div>   
+                <button class="header__burger-button burger-button visible-mobile" data-js-burger-button type="button" aria-label="Open-menu" title="Open-menu">
+                    <span class="burger-button__line"></span>
+                    <span class="burger-button__line"></span>
+                    <span class="burger-button__line"></span>
+                </button>
             </div>
-            <button class="header__burger-button burger-button visible-mobile" data-js-burger-button type="button" aria-label="Open-menu" title="Open-menu">
-                <span class="burger-button__line"></span>
-                <span class="burger-button__line"></span>
-                <span class="burger-button__line"></span>
-            </button>
         </div>
     </header>
     <main>
+        <section class="stars"></section>
         <section class="hero">
-            <div class="hero__slider">
-                <ul class="hero__slider-list">
-                    <li class="hero__slider-1">
-                        <img src="img/clients/bg.png" alt="">
-                    </li>
-                    <li class="hero__slider-2">
-                        <img src="img/clients/clients-1.jpg" alt="">
-                    </li>
-                </ul>
-            </div>
-            <div class="hero__text">
-                <div class="hero__text-container container">
-                    <a href="tel:+7 843 212-54-03">+7 843 212-54-03</a>
-                    <p>energo.alekseev@yandex.ru</p>
-                    <p>г. Казань, ул. Восстания, 100</p>
-                </div>
-            </div>
-        </section>
-        <h1 class="seamless-gradient-text">Ремонт промышленного <br> оборудования 
-    и электродвигателей</h1>
-        <section class="services">
-            <div class="services__container container">
-                <h2 class="h2">Услуги</h2>
-                <div class="services__container-info">
-                    <ul class="services__container-info-list">
-                        <li class="services__container-info-item">
-                            <img src="./img/services/services-1.png" width="250" height="250" alt="">
-                            <ul>
-                                <li>
-                                    ЗАМЕНА ОБМОТОК СТАТОРА
-                                </li>
-                                <li>
-                                    ЗАМЕНА ОБМОТОК РОТОРА (ДВИГАТЕЛЕЙ С ФАЗНЫМ РОТОРОМ)
-                                </li>
-                                <li>
-                                    РЕМОНТ КОЛЛЕКТОРНЫХ ЭЛЕКТРОДВИГАТЕЛЕЙ
-                                </li>
-                                <li>
-                                    РЕМОНТ ДВИГАТЕЛЕЙ ПОСТОЯННОГО ТОКА
-                                </li>
-                                <li>
-                                    ВОССТАНОВЛЕНИЕ ВАЛОВ,
-                                    ПОДШИПНИКОВЫХ ЩИТОВ
-                                </li>
-                                <li>
-                                    ЗАМЕНА ПОДШИПНИКОВ
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="services__container-info-item">
-                             <a href="html/services-2.html"><img src="./img/services/services-2.png" width="250" height="250" alt=""></a>
-                            <ul>
-                                <li>
-                                    ПОГРУЖНЫЕ
-                                </li>
-                                <li>
-                                    ФЕКАЛЬНЫЕ
-                                </li>
-                                <li>
-                                    МНОГОСТУПЕНЧАТЫЕ
-                                </li>
-                                <li>
-                                    ПОВЕРХНОСТНЫЕ
-                                </li>
-                                <li>
-                                    ДРЕНАЖНЫЕ
-                                </li>
-                                <li>
-                                    GRUNDFOS
-                                </li>
-                                <li>
-                                    PEDROLLO
-                                </li>
-                                <li>
-                                    ГНОМ
-                                </li>
-                                <li>
-                                    ДЖИЛЕКС
-                                </li>
-                                <li>
-                                    WILO
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="services__container-info-item">
-                            <img href="html/services-3.html" src="./img/services/services-3.png" width="250" height="250" alt="">
-                            <p>Для обсуждения вашей модели позвоните по номеру <a href="tel:+7 843 212-54-03"><span class="blue"><b>+7 843 212-54-03</b></span></a></p>
-                        </li>
-                        <li class="services__container-info-item">
-                            <img href="html/services-4.html" src="./img/services/services-4.png" width="250" height="250" alt="">
-                            <p>Для обсуждения вашей модели позвоните по номеру <a href="tel:+7 843 212-54-03"><span class="blue"><b>+7 843 212-54-03</b></span></a></p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="home container">
-            <h2 class="h2">О нас</h2>
-            <div class="home">
-                <div class="home__information">
-                    <p>
-                        Наша фирма работает с декабря 1998 года и вот уже много лет мы занимаемся профессиональным ремонтом промышленного оборудования и электродвигателей. Мы команда профессионалов любящая свое дело и готовая предложить вам лучшее обслуживание за лучшую цену. В нашей работе мы делаем упор на качество и скорость нашей работы, и все для того, чтобы ваше оборудование прослужило вам как можно дольше.
-                    </p>
-                    <ul>
-                        <b>Мы предлагаем</b>
-                        <li>Ремонт электродвигателей </li>
-                        <li>Ремонт трансформаторов </li>
-                        <li>Ремонт генераторов</li>
-                        <li>Ремонт гидротолкателей</li>
-                    </ul>
-                    <p>Мы работаем с организациями и физическими лицами. Наш огромный опыт и любовь к делу позволяет нам браться за любую даже самую сложную задачу</p>
-                    <p style="margin-bottom: 0;">Наш номер телефона <a href="tel:+7 843 212-54-03"><span class="blue"><b>+7 843 212-54-03</b></span></a></p>
-                    <p>E-mail: energo.alekseev@yandex.ru</p>
-                    <img class="home__information-certificate-img" src="img/home/certificate.png" width="400" alt="">
-                    <div class="home__eldin">
-                        <div class="home__eldin-logo">
-                            <p><b>Сервисный центр ОАО</b></p>
-                            <img src="img/home/eldin.gif" width="200" alt="">
-                            <a href="tel:+7 843 212-54-03"><b>тел.: +7 843 212-54-03</b></a>
-                        </div>
-                        <div class="home__eldin-text">
-                            <p>А так же мы единственные в Казани кто является сервисным центром ОАО «ELDIN», обслуживаем продукцию Ярославского электромашиностроительного завода.</p>
-                        </div>
+            <div class="hero__main container">
+                <div class="hero__body">
+                    <p class="hero__subtitle">Любая идея на собственном сайте</p>
+                    <h1 class="hero__title seamless-gradient-text">Цифровое будущее для ваших проектов</h1>
+                    <div class="hero__description">
+                        <p>Мы создаем сайты, которые работают на ваш бизнес: от ярких лендингов до мощных интернет-магазинов. Наша цель — ваш рост и увеличение прибыли через эффективные цифровые инструменты.</p>
                     </div>
                 </div>
+                <div class="hero__metrics metrics">
+                    <dl class="metrics__list">
+                        <div class="metrics__item">
+                            <dt class="metrics__key">Проектов <br> закончено</dt>
+                            <dd class="metrics__value h3">50 <span class="metrics__sign">+</span></dd>
+                        </div>
+                        <div class="metrics__item">
+                            <dt class="metrics__key">Лет <br> опыта</dt>
+                            <dd class="metrics__value h3">5 <span class="metrics__sign">+</span></dd>
+                        </div>
+                        <div class="metrics__item">
+                            <dt class="metrics__key">Проектов <br> в работе</dt>
+                            <dd class="metrics__value h3">20<span class="metrics__sign">+</span></dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="hero__resources-preview resources-preview">
+                    <div class="resources-preview__cost">
+                        <div class="resources-preview__cost-container">
+                            <p>Любой сайт</p>
+                            <p>от <span>13990</span></p>
+                        </div>
+                    </div>
+                    <div class="resources-preview-container">
+                        <svg class="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="500" height="700" preserveAspectRatio="none" viewBox="0 0 500 700">
+                        <g mask="url(&quot;#SvgjsMask1112&quot;)" fill="none">
+                            <path d="M-39.71 577.36L-39.71 577.36" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M-39.71 577.36L-38.6 677.25" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M-39.71 577.36L31.83 670.99" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M-39.71 577.36L-60.07 722.79" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M-39.71 577.36L122.96 548.97" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M-39.71 577.36L128.56 651.54" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M-38.6 677.25L-38.6 677.25" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M-38.6 677.25L-60.07 722.79" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M-38.6 677.25L31.83 670.99" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M-60.07 722.79L-60.07 722.79" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M-60.07 722.79L31.83 670.99" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M-60.07 722.79L61.15 746.96" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M-60.07 722.79L119.69 749.55" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M-60.07 722.79L128.56 651.54" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M31.83 670.99L31.83 670.99" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M31.83 670.99L61.15 746.96" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M31.83 670.99L128.56 651.54" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M31.83 670.99L119.69 749.55" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M61.15 746.96L61.15 746.96" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M61.15 746.96L119.69 749.55" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M61.15 746.96L128.56 651.54" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M118.52 389.59L118.52 389.59" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M118.52 389.59L140.72 477.94" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M118.52 389.59L230.11 412.15" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M118.52 389.59L229.02 323.13" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M140.72 477.94L140.72 477.94" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M140.72 477.94L122.96 548.97" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M140.72 477.94L230.71 501.22" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M122.96 548.97L122.96 548.97" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M122.96 548.97L222.9 566.31" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M122.96 548.97L128.56 651.54" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M122.96 548.97L230.71 501.22" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M122.96 548.97L31.83 670.99" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M128.56 651.54L128.56 651.54" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M128.56 651.54L119.69 749.55" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M119.69 749.55L119.69 749.55" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M229.02 323.13L229.02 323.13" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M229.02 323.13L301.2 306.58" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M229.02 323.13L230.11 412.15" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M230.11 412.15L230.11 412.15" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M230.11 412.15L298.59 404.87" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M230.11 412.15L230.71 501.22" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M230.11 412.15L140.72 477.94" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M230.71 501.22L230.71 501.22" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M230.71 501.22L222.9 566.31" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M230.71 501.22L301.72 502.18" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M230.71 501.22L321.31 557.48" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M222.9 566.31L222.9 566.31" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M222.9 566.31L321.31 557.48" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M222.9 566.31L237.67 666.49" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M237.67 666.49L237.67 666.49" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M237.67 666.49L290.38 642" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M237.67 666.49L226.51 765.09" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M226.51 765.09L226.51 765.09" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M226.51 765.09L288.54 756.52" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M226.51 765.09L119.69 749.55" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M324.58 28.64L324.58 28.64" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M324.58 28.64L409.95 33.54" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M310.08 236.67L310.08 236.67" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M310.08 236.67L301.2 306.58" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M310.08 236.67L406.59 225.57" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M301.2 306.58L301.2 306.58" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M301.2 306.58L388.32 325.43" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M301.2 306.58L298.59 404.87" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M298.59 404.87L298.59 404.87" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M298.59 404.87L301.72 502.18" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M298.59 404.87L396.56 391.14" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M298.59 404.87L229.02 323.13" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M301.72 502.18L301.72 502.18" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M301.72 502.18L321.31 557.48" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M301.72 502.18L381.15 487.67" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M301.72 502.18L222.9 566.31" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M301.72 502.18L395.67 547.08" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M321.31 557.48L321.31 557.48" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M321.31 557.48L395.67 547.08" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M321.31 557.48L290.38 642" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M321.31 557.48L381.15 487.67" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M290.38 642L290.38 642" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M288.54 756.52L288.54 756.52" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M288.54 756.52L237.67 666.49" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M288.54 756.52L290.38 642" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M288.54 756.52L403.07 751.39" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M288.54 756.52L119.69 749.55" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M288.54 756.52L128.56 651.54" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M379.07 -56.86L379.07 -56.86" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M379.07 -56.86L409.95 33.54" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M379.07 -56.86L324.58 28.64" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M409.95 33.54L409.95 33.54" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M409.95 33.54L486.8 28.7" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M391.04 125.97L391.04 125.97" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M391.04 125.97L464.89 146.19" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M391.04 125.97L409.95 33.54" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M391.04 125.97L406.59 225.57" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M391.04 125.97L324.58 28.64" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M391.04 125.97L486.8 28.7" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M391.04 125.97L310.08 236.67" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M406.59 225.57L406.59 225.57" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M406.59 225.57L464.89 146.19" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M406.59 225.57L388.32 325.43" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M406.59 225.57L484.14 293.33" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M406.59 225.57L301.2 306.58" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M388.32 325.43L388.32 325.43" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M388.32 325.43L396.56 391.14" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M388.32 325.43L484.14 293.33" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M388.32 325.43L482.95 381.14" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M388.32 325.43L310.08 236.67" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M396.56 391.14L396.56 391.14" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M396.56 391.14L482.95 381.14" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M396.56 391.14L381.15 487.67" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M381.15 487.67L381.15 487.67" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M381.15 487.67L395.67 547.08" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M395.67 547.08L395.67 547.08" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M395.67 547.08L482.94 588.09" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M395.67 547.08L489.2 476.66" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M395.67 547.08L290.38 642" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M403.07 751.39L403.07 751.39" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M403.07 751.39L491.87 726.68" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M403.07 751.39L488.36 677.46" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M403.07 751.39L290.38 642" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M403.07 751.39L226.51 765.09" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M501.67 -63.54L501.67 -63.54" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M501.67 -63.54L587.68 -34.88" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M501.67 -63.54L486.8 28.7" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M501.67 -63.54L566.16 28.68" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M501.67 -63.54L379.07 -56.86" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M501.67 -63.54L409.95 33.54" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M486.8 28.7L486.8 28.7" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M486.8 28.7L566.16 28.68" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M486.8 28.7L587.68 -34.88" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M464.89 146.19L464.89 146.19" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M464.89 146.19L486.8 28.7" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M464.89 146.19L553.82 234.49" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M484.14 293.33L484.14 293.33" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M484.14 293.33L482.95 381.14" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M484.14 293.33L553.82 234.49" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M484.14 293.33L574.38 309.5" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M482.95 381.14L482.95 381.14" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M482.95 381.14L489.2 476.66" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M482.95 381.14L586.2 376.24" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M489.2 476.66L489.2 476.66" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M489.2 476.66L579.86 464.35" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M482.94 588.09L482.94 588.09" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M482.94 588.09L488.36 677.46" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M482.94 588.09L585.56 553.78" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M482.94 588.09L489.2 476.66" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M482.94 588.09L568.9 677.66" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M482.94 588.09L491.87 726.68" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M488.36 677.46L488.36 677.46" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M488.36 677.46L491.87 726.68" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M488.36 677.46L568.9 677.66" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M488.36 677.46L585.56 553.78" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M488.36 677.46L395.67 547.08" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M491.87 726.68L491.87 726.68" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M491.87 726.68L568.9 677.66" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M587.68 -34.88L587.68 -34.88" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M587.68 -34.88L566.16 28.68" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M587.68 -34.88L409.95 33.54" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M587.68 -34.88L379.07 -56.86" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M566.16 28.68L566.16 28.68" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M566.16 28.68L464.89 146.19" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M566.16 28.68L409.95 33.54" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M553.82 234.49L553.82 234.49" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M553.82 234.49L574.38 309.5" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M574.38 309.5L574.38 309.5" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M574.38 309.5L586.2 376.24" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M586.2 376.24L586.2 376.24" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M586.2 376.24L579.86 464.35" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M586.2 376.24L484.14 293.33" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M586.2 376.24L489.2 476.66" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M586.2 376.24L553.82 234.49" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M579.86 464.35L579.86 464.35" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M579.86 464.35L585.56 553.78" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M585.56 553.78L585.56 553.78" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M568.9 677.66L568.9 677.66" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <path d="M568.9 677.66L585.56 553.78" stroke="rgba(19, 46, 101, 0)" stroke-width="1.5"></path>
+                            <circle r="5" cx="-39.71" cy="577.36" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="-38.6" cy="677.25" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="-60.07" cy="722.79" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="31.83" cy="670.99" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="61.15" cy="746.96" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="118.52" cy="389.59" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="140.72" cy="477.94" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="122.96" cy="548.97" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="128.56" cy="651.54" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="119.69" cy="749.55" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="229.02" cy="323.13" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="230.11" cy="412.15" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="230.71" cy="501.22" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="222.9" cy="566.31" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="237.67" cy="666.49" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="226.51" cy="765.09" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="324.58" cy="28.64" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="310.08" cy="236.67" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="301.2" cy="306.58" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="298.59" cy="404.87" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="301.72" cy="502.18" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="321.31" cy="557.48" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="290.38" cy="642" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="288.54" cy="756.52" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="379.07" cy="-56.86" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="409.95" cy="33.54" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="391.04" cy="125.97" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="406.59" cy="225.57" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="388.32" cy="325.43" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="396.56" cy="391.14" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="381.15" cy="487.67" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="395.67" cy="547.08" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="403.07" cy="751.39" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="501.67" cy="-63.54" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="486.8" cy="28.7" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="464.89" cy="146.19" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="484.14" cy="293.33" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="482.95" cy="381.14" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="489.2" cy="476.66" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="482.94" cy="588.09" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="488.36" cy="677.46" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="491.87" cy="726.68" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="587.68" cy="-34.88" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="566.16" cy="28.68" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="553.82" cy="234.49" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="574.38" cy="309.5" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="586.2" cy="376.24" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="579.86" cy="464.35" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="585.56" cy="553.78" fill="rgba(19, 46, 101, 0)"></circle>
+                            <circle r="5" cx="568.9" cy="677.66" fill="rgba(19, 46, 101, 0)"></circle>
+                            <path d="M54.35 661.76L54.35 661.76" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M54.35 661.76L141.48 636.88" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M54.35 661.76L-36.37 642.52" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M54.35 661.76L61.33 566.55" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M54.35 661.76L24.1 755.65" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M298.89 477.01L298.89 477.01" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M298.89 477.01L373.62 475.83" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M298.89 477.01L285.38 559.82" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M298.89 477.01L309.88 386.17" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M298.89 477.01L208.85 494.09" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M383.4 378.44L383.4 378.44" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M383.4 378.44L382.78 318.4" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M383.4 378.44L309.88 386.17" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M383.4 378.44L476.81 384.6" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M383.4 378.44L373.62 475.83" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M383.4 378.44L298.89 477.01" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M478.96 31.83L478.96 31.83" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M478.96 31.83L502.9 -56.15" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M478.96 31.83L579.37 56.98" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M476.81 384.6L476.81 384.6" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M476.81 384.6L557.07 406.85" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M476.81 384.6L499.97 469.84" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M497.9 670.8L497.9 670.8" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M497.9 670.8L557.09 654.14" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M497.9 670.8L460.85 727.36" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M497.9 670.8L556.74 722.92" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M497.9 670.8L405.63 676.87" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M497.9 670.8L501.19 557.32" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M579.37 56.98L579.37 56.98" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M579.37 56.98L574.87 130.6" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M586.9 215.91L586.9 215.91" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M586.9 215.91L571.89 289.41" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M586.9 215.91L574.87 130.6" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M586.9 215.91L498.65 292.35" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M586.9 215.91L468.29 234.78" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M586.9 215.91L495.9 136.15" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M586.9 215.91L579.37 56.98" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M560.88 465.4L560.88 465.4" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M560.88 465.4L557.07 406.85" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M560.88 465.4L499.97 469.84" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M560.88 465.4L501.19 557.32" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M560.88 465.4L476.81 384.6" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M560.88 465.4L580.61 582.58" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M560.88 465.4L571.89 289.41" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M557.09 654.14L557.09 654.14" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M557.09 654.14L556.74 722.92" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M557.09 654.14L580.61 582.58" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M-50.56 574.44L-50.56 574.44" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M-50.56 574.44L-36.37 642.52" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M-50.56 574.44L61.33 566.55" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M-36.37 642.52L-36.37 642.52" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M-36.37 642.52L-51 740.53" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M-36.37 642.52L61.33 566.55" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M-51 740.53L-51 740.53" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M-51 740.53L24.1 755.65" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M61.33 566.55L61.33 566.55" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M61.33 566.55L126.4 571.51" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M61.33 566.55L141.48 636.88" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M24.1 755.65L24.1 755.65" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M24.1 755.65L150.55 752.66" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M126.4 571.51L126.4 571.51" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M126.4 571.51L141.48 636.88" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M126.4 571.51L215.35 559.53" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M126.4 571.51L208.85 494.09" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M126.4 571.51L54.35 661.76" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M141.48 636.88L141.48 636.88" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M141.48 636.88L222.52 652.17" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M141.48 636.88L215.35 559.53" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M150.55 752.66L150.55 752.66" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M150.55 752.66L208.45 739.08" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M150.55 752.66L141.48 636.88" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M150.55 752.66L222.52 652.17" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M150.55 752.66L54.35 661.76" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M208.85 494.09L208.85 494.09" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M208.85 494.09L215.35 559.53" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M215.35 559.53L215.35 559.53" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M215.35 559.53L285.38 559.82" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M215.35 559.53L222.52 652.17" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M222.52 652.17L222.52 652.17" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M222.52 652.17L291.21 667.03" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M222.52 652.17L208.45 739.08" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M222.52 652.17L285.38 559.82" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M208.45 739.08L208.45 739.08" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M208.45 739.08L291.21 667.03" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M208.45 739.08L316.91 760.5" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M309.88 386.17L309.88 386.17" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M309.88 386.17L382.78 318.4" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M285.38 559.82L285.38 559.82" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M285.38 559.82L374.78 561.73" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M285.38 559.82L208.85 494.09" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M285.38 559.82L291.21 667.03" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M291.21 667.03L291.21 667.03" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M291.21 667.03L316.91 760.5" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M316.91 760.5L316.91 760.5" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M316.91 760.5L395.59 735.53" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M316.91 760.5L405.63 676.87" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M397.46 127.42L397.46 127.42" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M397.46 127.42L495.9 136.15" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M397.46 127.42L405.56 239.75" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M397.46 127.42L478.96 31.83" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M397.46 127.42L468.29 234.78" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M397.46 127.42L574.87 130.6" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M397.46 127.42L382.78 318.4" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M405.56 239.75L405.56 239.75" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M405.56 239.75L468.29 234.78" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M405.56 239.75L382.78 318.4" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M405.56 239.75L498.65 292.35" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M405.56 239.75L495.9 136.15" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M405.56 239.75L383.4 378.44" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M382.78 318.4L382.78 318.4" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M373.62 475.83L373.62 475.83" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M373.62 475.83L374.78 561.73" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M373.62 475.83L309.88 386.17" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M374.78 561.73L374.78 561.73" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M374.78 561.73L298.89 477.01" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M374.78 561.73L405.63 676.87" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M374.78 561.73L501.19 557.32" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M374.78 561.73L291.21 667.03" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M405.63 676.87L405.63 676.87" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M405.63 676.87L395.59 735.53" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M405.63 676.87L460.85 727.36" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M405.63 676.87L291.21 667.03" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M395.59 735.53L395.59 735.53" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M395.59 735.53L460.85 727.36" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M395.59 735.53L497.9 670.8" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M395.59 735.53L291.21 667.03" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M502.9 -56.15L502.9 -56.15" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M502.9 -56.15L590.52 -51.67" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M502.9 -56.15L579.37 56.98" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M502.9 -56.15L495.9 136.15" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M502.9 -56.15L574.87 130.6" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M495.9 136.15L495.9 136.15" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M495.9 136.15L574.87 130.6" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M495.9 136.15L468.29 234.78" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M468.29 234.78L468.29 234.78" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M468.29 234.78L498.65 292.35" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M498.65 292.35L498.65 292.35" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M498.65 292.35L571.89 289.41" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M498.65 292.35L476.81 384.6" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M499.97 469.84L499.97 469.84" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M499.97 469.84L557.07 406.85" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M499.97 469.84L501.19 557.32" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M501.19 557.32L501.19 557.32" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M501.19 557.32L580.61 582.58" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M460.85 727.36L460.85 727.36" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M460.85 727.36L556.74 722.92" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M460.85 727.36L557.09 654.14" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M460.85 727.36L316.91 760.5" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M590.52 -51.67L590.52 -51.67" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M590.52 -51.67L579.37 56.98" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M590.52 -51.67L478.96 31.83" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M590.52 -51.67L574.87 130.6" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M590.52 -51.67L495.9 136.15" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M590.52 -51.67L397.46 127.42" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M574.87 130.6L574.87 130.6" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M571.89 289.41L571.89 289.41" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M571.89 289.41L468.29 234.78" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M571.89 289.41L557.07 406.85" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M571.89 289.41L476.81 384.6" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M571.89 289.41L574.87 130.6" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M557.07 406.85L557.07 406.85" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M580.61 582.58L580.61 582.58" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <path d="M556.74 722.92L556.74 722.92" stroke="hsl(226, 100%, 74.2%)" stroke-width="1.5"></path>
+                            <circle r="25" cx="54.35" cy="661.76" fill="url(&quot;#SvgjsRadialGradient1113&quot;)"></circle>
+                            <circle style="display: none;" r="25" cx="298.89" cy="477.01" fill="url(&quot;#SvgjsRadialGradient1113&quot;)"></circle>
+                            <circle r="25" cx="383.4" cy="378.44" fill="url(&quot;#SvgjsRadialGradient1113&quot;)"></circle>
+                            <circle r="25" cx="478.96" cy="31.83" fill="url(&quot;#SvgjsRadialGradient1113&quot;)"></circle>
+                            <circle r="25" cx="476.81" cy="384.6" fill="url(&quot;#SvgjsRadialGradient1113&quot;)"></circle>
+                            <circle r="25" cx="497.9" cy="670.8" fill="url(&quot;#SvgjsRadialGradient1113&quot;)"></circle>
+                            <circle r="25" cx="579.37" cy="56.98" fill="url(&quot;#SvgjsRadialGradient1113&quot;)"></circle>
+                            <circle r="25" cx="586.9" cy="215.91" fill="url(&quot;#SvgjsRadialGradient1113&quot;)"></circle>
+                            <circle r="25" cx="560.88" cy="465.4" fill="url(&quot;#SvgjsRadialGradient1113&quot;)"></circle>
+                            <circle r="25" cx="557.09" cy="654.14" fill="url(&quot;#SvgjsRadialGradient1113&quot;)"></circle>
+                            <circle r="5" cx="-50.56" cy="574.44" fill="#92abff"></circle>
+                            <circle r="5" cx="-36.37" cy="642.52" fill="#92abff"></circle>
+                            <circle r="5" cx="-51" cy="740.53" fill="#92abff"></circle>
+                            <circle r="5" cx="61.33" cy="566.55" fill="#92abff"></circle>
+                            <circle r="5" cx="24.1" cy="755.65" fill="#92abff"></circle>
+                            <circle r="5" cx="126.4" cy="571.51" fill="#92abff"></circle>
+                            <circle r="5" cx="141.48" cy="636.88" fill="#92abff"></circle>
+                            <circle r="5" cx="150.55" cy="752.66" fill="#92abff"></circle>
+                            <circle r="5" cx="208.85" cy="494.09" fill="#92abff"></circle>
+                            <circle r="5" cx="215.35" cy="559.53" fill="#92abff"></circle>
+                            <circle r="5" cx="222.52" cy="652.17" fill="#92abff"></circle>
+                            <circle r="5" cx="208.45" cy="739.08" fill="#92abff"></circle>
+                            <circle r="5" cx="309.88" cy="386.17" fill="#92abff"></circle>
+                            <circle r="5" cx="285.38" cy="559.82" fill="#92abff"></circle>
+                            <circle r="5" cx="291.21" cy="667.03" fill="#92abff"></circle>
+                            <circle r="5" cx="316.91" cy="760.5" fill="#92abff"></circle>
+                            <circle r="5" cx="397.46" cy="127.42" fill="#92abff"></circle>
+                            <circle r="5" cx="405.56" cy="239.75" fill="#92abff"></circle>
+                            <circle r="5" cx="382.78" cy="318.4" fill="#92abff"></circle>
+                            <circle r="5" cx="373.62" cy="475.83" fill="#92abff"></circle>
+                            <circle r="5" cx="374.78" cy="561.73" fill="#92abff"></circle>
+                            <circle r="5" cx="405.63" cy="676.87" fill="#92abff"></circle>
+                            <circle r="5" cx="395.59" cy="735.53" fill="#92abff"></circle>
+                            <circle r="5" cx="502.9" cy="-56.15" fill="#92abff"></circle>
+                            <circle r="5" cx="495.9" cy="136.15" fill="#92abff"></circle>
+                            <circle r="5" cx="468.29" cy="234.78" fill="#92abff"></circle>
+                            <circle r="5" cx="498.65" cy="292.35" fill="#92abff"></circle>
+                            <circle r="5" cx="499.97" cy="469.84" fill="#92abff"></circle>
+                            <circle r="5" cx="501.19" cy="557.32" fill="#92abff"></circle>
+                            <circle r="5" cx="460.85" cy="727.36" fill="#92abff"></circle>
+                            <circle r="5" cx="590.52" cy="-51.67" fill="#92abff"></circle>
+                            <circle r="5" cx="574.87" cy="130.6" fill="#92abff"></circle>
+                            <circle r="5" cx="571.89" cy="289.41" fill="#92abff"></circle>
+                            <circle r="5" cx="557.07" cy="406.85" fill="#92abff"></circle>
+                            <circle r="5" cx="580.61" cy="582.58" fill="#92abff"></circle>
+                            <circle r="5" cx="556.74" cy="722.92" fill="#92abff"></circle>
+                        </g>
+                        <defs>
+                            <mask id="SvgjsMask1112">
+                                <rect width="500" height="700" fill="#ffffff"></rect>
+                            </mask>
+                            <radialGradient id="SvgjsRadialGradient1113">
+                                <stop stop-color="#ffffff" offset="0.1"></stop>
+                                <stop stop-color="rgba(36, 87, 255, 1)" offset="0.2"></stop>
+                                <stop stop-color="rgba(36, 87, 255, 0)" offset="1"></stop>
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                    </div>
+                    <!-- <div class="resources-preview__body">
+                        <p class="resources-preview__title h5">Explore 1000+ resources</p>
+                        <p class="resources-preview__subtitle">Over 1,000 articles on emerging tech trends and breakthroughs.</p>
+                    </div>
+                    <div class="resources-preview__button button"><span class="icon icon--yellow-arrow">Explore Resources</span></div> -->
+                </div>
             </div>
         </section>
-        <!-- <section class="clients-container">
-            <div class="clients container">
-                <h2 class="h2 alone">Наши клиенты</h2>
-                <div class="clients__scroll">
-                    <ul class="clients__scroll__container dragscroll">
-                        <li class="clients__scroll__container-item">
-                            <h3 class="h3"><b>АО "Татхимфармпрепараты"</b></h3>
-                            <div>
-                                <img src="./img/clients/clients-1.jpg" alt="">
-                            </div>
-                            <p>АО «Татхимфармпрепараты» входит в ТОП-20 крупнейших производителей лекарственных препаратов в России и является одним из лидеров по выпуску таблетированных препаратов.</p>
+        <section class="advantages">
+            <ul class="advantages__list container">
+                <li class="advantages__list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="40.000000pt" height="40.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+<path d="M269 4477 c-40 -20 -75 -48 -96 -75 -66 -87 -63 -26 -63 -1297 0 -959 2 -1160 14 -1198 l14 -47 -34 0 c-41 0 -89 -22 -98 -45 -3 -9 -6 -92 -6 -185 0 -213 15 -271 92 -355 59 -65 119 -99 203 -114 40 -8 494 -11 1467 -11 l1408 0 0 -158 c0 -180 11 -235 62 -296 17 -21 54 -49 82 -62 l51 -24 774 0 c558 0 784 3 812 12 55 16 118 73 145 132 l24 51 0 1505 c0 1006 -4 1517 -10 1542 -16 56 -69 119 -125 147 l-49 26 -337 3 -337 3 -4 137 c-3 129 -5 140 -33 191 -16 29 -47 68 -68 87 -81 69 67 64 -1978 64 l-1847 0 -63 -33z m3761 -140 c13 -7 35 -28 47 -46 21 -30 23 -46 23 -147 l0 -114 -35 0 -35 0 0 100 c0 94 -2 103 -25 125 l-24 25 -1794 0 c-1752 0 -1795 0 -1818 -19 l-24 -19 0 -1137 0 -1137 24 -19 c23 -19 60 -19 1412 -19 l1389 0 0 -35 0 -35 -1402 0 c-1390 0 -1403 0 -1436 20 -66 40 -63 -28 -60 1239 3 1149 3 1150 24 1178 11 15 32 34 45 40 35 19 3653 18 3689 0z m-160 -261 l0 -45 -257 -3 -258 -3 -55 -31 c-61 -35 -113 -106 -124 -171 -3 -21 -6 -419 -6 -885 l0 -848 -1335 0 -1335 0 0 1015 0 1015 1685 0 1685 0 0 -44z m1066 -239 l24 -28 0 -1485 c0 -1110 -3 -1491 -12 -1507 -25 -48 0 -46 -800 -47 l-757 0 -28 24 -28 24 -2 1489 c-2 1181 0 1493 10 1513 26 51 8 50 815 47 l754 -2 24 -28z m-3346 -2209 c0 -83 18 -129 63 -162 28 -21 38 -21 531 -21 467 0 504 1 529 18 50 32 67 73 67 160 l0 77 195 0 195 0 0 -195 0 -195 -1432 2 -1433 3 -42 23 c-24 12 -55 41 -70 64 -26 39 -28 49 -31 170 l-4 128 716 0 716 0 0 -72z m1030 22 l0 -50 -432 2 -433 3 -3 48 -3 47 435 0 436 0 0 -50z"/>
+<path d="M4096 3819 c-37 -29 -37 -89 0 -118 35 -27 66 -26 100 2 20 17 27 33 27 57 0 24 -7 40 -27 57 -34 28 -65 29 -100 2z"/>
+<path d="M4074 1171 c-110 -50 -139 -193 -56 -280 83 -87 210 -75 279 28 27 40 31 126 9 169 -31 58 -102 102 -165 102 -14 0 -45 -9 -67 -19z m86 -161 c0 -21 -15 -27 -25 -10 -7 12 2 30 16 30 5 0 9 -9 9 -20z"/>
+</g>
+</svg>
+                    <div>
+                        <h3>Широкий спектр</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, iure. Ducimus autem repellendus et quisquam, rerum inventore officiis. Aliquid, at!</p>
+                    </div>
+                </li>
+                <li class="advantages__list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="40.000000pt" height="40.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+<path d="M4760 5100 c-672 -70 -1291 -268 -1700 -543 -145 -97 -208 -153 -537 -480 l-331 -329 -469 -53 c-257 -28 -477 -57 -488 -63 -11 -6 -217 -208 -458 -449 -443 -444 -444 -445 -437 -508 3 -30 39 -64 79 -74 20 -5 170 -28 333 -51 l298 -42 82 -85 c46 -46 84 -88 86 -92 1 -4 -96 -67 -216 -139 -219 -131 -242 -150 -242 -203 0 -11 5 -30 11 -42 16 -31 1138 -1155 1171 -1173 15 -8 36 -14 47 -14 53 0 72 23 203 242 72 120 135 217 139 216 4 -2 46 -40 92 -86 l85 -82 42 -298 c23 -163 46 -313 51 -333 10 -40 44 -76 74 -79 63 -7 64 -6 508 437 241 241 443 447 449 458 6 11 35 231 63 488 l53 469 329 331 c327 329 383 392 480 537 279 413 475 1034 543 1714 27 271 27 271 -14 312 -31 31 -39 34 -92 33 -33 -1 -138 -9 -234 -19z m146 -272 c-17 -196 -59 -446 -113 -672 l-35 -149 -374 374 c-206 206 -374 375 -374 376 0 1 66 17 148 37 159 38 383 78 527 95 50 6 101 13 115 15 14 2 45 4 69 5 l44 1 -7 -82z m-663 -586 l448 -448 -36 -100 c-98 -266 -267 -555 -433 -739 -49 -55 -381 -390 -736 -745 l-646 -645 -403 403 c-395 394 -404 402 -443 402 -42 0 -74 -20 -94 -59 -29 -56 -20 -66 395 -481 217 -217 395 -399 395 -405 0 -13 -122 -135 -135 -135 -13 0 -1265 1252 -1265 1265 0 21 1694 1700 1776 1762 176 131 395 249 614 332 58 22 107 40 110 41 3 0 207 -202 453 -448z m-2689 -1133 l-412 -411 -228 31 c-126 18 -237 35 -247 39 -14 6 51 75 320 344 l338 338 295 34 c162 18 306 34 320 35 20 1 -61 -85 -386 -410z m225 -1333 l403 -404 -102 -171 c-57 -94 -105 -171 -109 -171 -13 0 -945 939 -938 946 8 9 330 203 337 204 3 0 187 -182 409 -404z m1706 -137 l-35 -314 -338 -338 c-269 -269 -338 -334 -344 -320 -4 10 -21 121 -39 247 l-31 228 408 409 c224 224 409 407 411 405 2 -1 -13 -144 -32 -317z"/>
+<path d="M3125 3839 c-27 -6 -88 -28 -135 -51 -166 -80 -291 -242 -325 -423 -19 -96 -19 -141 0 -230 49 -234 236 -421 470 -470 89 -19 134 -19 232 0 179 34 342 159 421 325 157 326 0 708 -339 827 -84 29 -236 40 -324 22z m239 -204 c134 -41 238 -149 276 -288 33 -123 -12 -280 -110 -378 -187 -187 -511 -135 -630 101 -115 227 -2 488 245 566 55 17 160 17 219 -1z"/>
+<path d="M1683 2652 c-34 -5 -73 -58 -73 -99 0 -25 8 -43 29 -64 73 -72 193 0 161 97 -6 18 -17 37 -25 44 -18 15 -65 27 -92 22z"/>
+<path d="M488 1193 c-180 -180 -332 -339 -339 -354 -8 -21 -8 -37 1 -63 14 -43 48 -66 97 -66 36 0 51 14 365 327 180 180 332 339 339 354 8 21 8 37 -1 63 -15 46 -44 66 -94 66 -39 0 -47 -7 -368 -327z"/>
+<path d="M1090 1224 c-36 -24 -1027 -1012 -1061 -1058 -39 -53 -38 -89 5 -132 43 -43 79 -44 132 -5 46 34 1034 1025 1058 1061 26 39 21 84 -15 119 -35 36 -80 41 -119 15z"/>
+<path d="M1375 941 c-16 -10 -173 -162 -347 -338 -303 -304 -318 -321 -318 -357 0 -48 23 -82 66 -96 26 -9 42 -9 63 -1 15 7 174 159 354 339 313 314 327 329 327 365 0 48 -23 82 -62 96 -41 15 -48 14 -83 -8z"/>
+</g>
+</svg>
+                    <div>
+                        <h3>Широкий спектр</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, iure. Ducimus autem repellendus et quisquam, rerum inventore officiis. Aliquid, at!</p>
+                    </div>
+                </li>
+                <li class="advantages__list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="40.000000pt" height="40.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+<path d="M2156 4952 c-33 -37 -366 -627 -366 -649 0 -15 87 -122 260 -322 143 -165 260 -304 260 -309 0 -4 -141 -64 -312 -132 -172 -68 -321 -131 -332 -140 -21 -17 -342 -432 -365 -471 -25 -45 -1 -66 178 -154 l161 -79 0 -311 c0 -310 0 -312 22 -332 13 -11 294 -149 625 -307 l603 -287 87 40 c164 74 1115 530 1139 546 l24 15 2 317 3 316 170 86 c161 81 170 88 173 117 3 26 -22 64 -182 272 l-186 241 -325 128 c-178 70 -325 130 -325 133 0 3 102 122 226 265 295 338 307 354 300 380 -8 32 -354 628 -373 643 -13 9 -176 12 -733 12 -684 0 -718 -1 -734 -18z m514 -308 c-65 -113 -120 -208 -123 -210 -3 -3 -53 80 -112 183 -60 103 -115 198 -123 211 l-14 22 245 0 246 0 -119 -206z m808 197 c-1 -6 -55 -100 -118 -210 -86 -149 -118 -197 -126 -188 -9 10 -190 322 -223 385 l-12 22 241 0 c146 0 240 -4 238 -9z m-1150 -278 l111 -193 -240 0 c-131 0 -239 2 -239 6 0 3 53 97 117 209 98 169 119 200 129 186 6 -9 61 -103 122 -208z m687 16 c64 -111 114 -203 112 -205 -2 -3 -110 -3 -239 -2 l-235 3 116 202 c64 111 119 203 122 203 4 0 59 -90 124 -201z m697 -1 l117 -203 -119 -3 c-66 -1 -174 -1 -240 0 l-120 3 117 203 c64 111 119 202 123 202 3 0 58 -91 122 -202z m-1206 -355 c4 -16 62 -217 130 -448 67 -231 121 -421 120 -422 -2 -2 -708 810 -754 868 l-23 29 260 0 261 0 6 -27z m654 23 c0 -5 -180 -626 -231 -799 -18 -59 -35 -104 -39 -100 -4 5 -24 67 -45 138 -137 469 -215 742 -215 752 0 10 59 13 265 13 146 0 265 -2 265 -4z m638 -5 c-6 -17 -760 -882 -765 -878 -2 3 9 49 26 104 17 54 73 247 126 428 52 182 97 336 100 343 3 9 65 12 261 12 141 0 254 -4 252 -9z m-1167 -931 c213 -248 248 -280 283 -267 8 3 114 120 235 261 122 140 225 257 230 261 10 5 508 -189 524 -204 4 -5 -220 -99 -500 -210 l-507 -202 -131 51 c-558 217 -899 359 -880 366 11 4 130 52 265 105 135 54 248 98 251 98 3 1 107 -116 230 -259z m-356 -244 c286 -114 521 -209 523 -211 3 -3 -269 -417 -287 -438 -6 -6 -1042 491 -1059 508 -2 2 56 83 130 179 105 139 137 175 153 172 11 -2 254 -96 540 -210z m1929 37 c133 -173 136 -178 114 -189 -93 -48 -1040 -505 -1042 -502 -28 35 -287 440 -284 443 7 8 1052 424 1064 424 7 1 73 -79 148 -176z m-1115 -625 c94 -142 137 -199 154 -203 17 -5 118 40 396 174 205 100 374 181 377 181 2 0 3 -113 2 -252 l-3 -252 -529 -253 c-292 -139 -531 -253 -533 -253 -2 0 -3 239 -3 532 0 292 2 529 4 527 2 -2 63 -93 135 -201z m-261 -591 l-3 -264 -530 253 -530 253 -3 251 c-1 138 2 250 6 250 5 0 176 -81 381 -181 276 -135 377 -180 395 -175 17 4 59 60 152 203 l129 198 3 -262 c1 -144 1 -381 0 -526z"/>
+<path d="M616 1688 c-14 -20 -16 -108 -16 -751 0 -730 1 -757 34 -779 6 -4 162 -8 347 -8 399 0 369 -10 369 124 0 79 2 87 18 82 9 -3 127 -26 262 -52 l244 -46 517 10 c475 10 521 12 561 30 24 10 167 90 318 177 151 87 466 268 700 402 234 135 442 261 462 280 103 100 108 283 10 386 -68 72 -197 104 -289 74 -26 -9 -232 -111 -457 -226 l-410 -209 -27 44 c-31 48 -93 97 -142 113 -73 24 -1231 331 -1246 331 -9 0 -121 -33 -248 -74 -127 -41 -241 -77 -252 -81 -20 -6 -21 -3 -21 82 0 56 -4 93 -12 101 -9 9 -103 12 -359 12 l-348 0 -15 -22z m614 -758 l0 -660 -255 0 -255 0 0 660 0 660 255 0 255 0 0 -660z m1244 459 c331 -88 614 -169 631 -178 94 -54 101 -200 12 -263 -60 -43 -90 -38 -534 81 -226 61 -422 111 -434 111 -49 0 -77 -60 -44 -94 18 -18 -15 -8 481 -141 397 -107 456 -117 525 -93 89 30 160 107 181 196 l12 48 435 224 c422 216 438 223 497 224 51 1 66 -3 96 -26 52 -40 75 -103 58 -162 -7 -24 -24 -56 -39 -70 -22 -21 -1300 -764 -1425 -828 -37 -19 -69 -21 -544 -30 l-504 -10 -264 52 -264 53 2 450 3 450 85 28 c294 96 425 138 429 139 2 0 274 -72 605 -161z"/>
+</g>
+</svg>
+                    <div>
+                        <h3>Широкий спектр</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, iure. Ducimus autem repellendus et quisquam, rerum inventore officiis. Aliquid, at!</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="stages container">
+            <div class="stages-svg-1">
+                <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="500" height="1000" preserveAspectRatio="none" viewBox="0 0 500 1000">
+  
+  <defs>
+    <mask id="SvgjsMask1000">
+      <rect width="500" height="1000" fill="#ffffff"></rect>
+    </mask>
+    
+    <radialGradient id="SvgjsRadialGradient1001">
+      <stop stop-color="#ffffff" offset="0.1"></stop>
+      <stop stop-color="rgba(36, 87, 255, 0)" offset="0.2"></stop>
+      <stop stop-color="rgba(36, 87, 255, 0)" offset="1"></stop>
+    </radialGradient>
+  </defs>
+  
+  <g mask="url(#SvgjsMask1000)" fill="red">
+    
+    <path d="M-80.67 702.06L-54.22 819.4" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M-80.67 702.06L69.65 809.45" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M-54.22 819.4L-63.55 933.4" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M-54.22 819.4L56.26 693.82" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M-63.55 933.4L-70.91 1067.84" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M-63.55 933.4L38.45 1033.85" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M-63.55 933.4L87.18 915.17" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M-70.91 1067.84L38.45 1033.85" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M-70.91 1067.84L87.18 915.17" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M-70.91 1067.84L192.53 1072.08" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M-70.91 1067.84L69.65 809.45" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M56.26 693.82L69.65 809.45" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M56.26 693.82L174.28 699.19" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M69.65 809.45L87.18 915.17" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M69.65 809.45L177.68 794.19" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M87.18 915.17L197.21 922.53" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M38.45 1033.85L87.18 915.17" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M211.94 458.88L173.38 549.85" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M211.94 458.88L312.61 465.27" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M211.94 458.88L320.78 323.67" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M211.94 458.88L343.45 573.64" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M211.94 458.88L407.48 558.03" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M211.94 458.88L174.28 699.19" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M173.38 549.85L174.28 699.19" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M174.28 699.19L177.68 794.19" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M174.28 699.19L284.03 696.59" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M197.21 922.53L177.68 794.19" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M197.21 922.53L341.63 937.06" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M197.21 922.53L192.53 1072.08" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M197.21 922.53L69.65 809.45" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M192.53 1072.08L309.69 1081.2" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M192.53 1072.08L38.45 1033.85" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M300.63 77.28L409.76 44.64" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M300.63 77.28L323.48 196.98" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M300.63 77.28L415.33 164.4" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M323.48 196.98L415.33 164.4" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M323.48 196.98L320.78 323.67" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M323.48 196.98L409.76 44.64" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M320.78 323.67L425.96 339.76" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M320.78 323.67L312.61 465.27" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M320.78 323.67L415.33 164.4" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M312.61 465.27L343.45 573.64" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M312.61 465.27L407.48 558.03" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M312.61 465.27L460 465.73" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M343.45 573.64L407.48 558.03" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M284.03 696.59L327.64 794.42" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M284.03 696.59L343.45 573.64" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M284.03 696.59L424.61 717.6" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M284.03 696.59L177.68 794.19" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M327.64 794.42L424.61 717.6" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M327.64 794.42L341.63 937.06" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M327.64 794.42L177.68 794.19" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M341.63 937.06L453.13 1032.41" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M341.63 937.06L309.69 1081.2" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M309.69 1081.2L453.13 1032.41" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M309.69 1081.2L197.21 922.53" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M309.69 1081.2L550.27 1068.56" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M457.1 -53.9L586.93 -58.18" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M409.76 44.64L415.33 164.4" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M409.76 44.64L561.12 62.17" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M425.96 339.76L547.9 317.77" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M460 465.73L531.64 453.34" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M460 465.73L407.48 558.03" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M460 465.73L425.96 339.76" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M460 465.73L562.03 580.25" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M407.48 558.03L562.03 580.25" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M407.48 558.03L424.61 717.6" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M424.61 717.6L533.33 785.3" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M453.13 1032.41L550.27 1068.56" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M453.13 1032.41L570.34 945.26" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M453.13 1032.41L533.33 785.3" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M586.93 -58.18L561.12 62.17" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M586.93 -58.18L573.75 171.14" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M561.12 62.17L573.75 171.14" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M573.75 171.14L547.9 317.77" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M547.9 317.77L531.64 453.34" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M547.9 317.77L460 465.73" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M531.64 453.34L562.03 580.25" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M562.03 580.25L570.13 688.33" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M570.13 688.33L533.33 785.3" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M570.34 945.26L550.27 1068.56" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M570.34 945.26L533.33 785.3" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M550.27 1068.56L341.63 937.06" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M550.27 1068.56L533.33 785.3" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+
+    <!-- Все синие точки -->
+    <circle r="5" cx="-80.67" cy="702.06" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="-54.22" cy="819.4" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="-63.55" cy="933.4" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="-70.91" cy="1067.84" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="56.26" cy="693.82" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="69.65" cy="809.45" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="87.18" cy="915.17" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="38.45" cy="1033.85" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="211.94" cy="458.88" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="173.38" cy="549.85" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="174.28" cy="699.19" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="177.68" cy="794.19" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="197.21" cy="922.53" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="192.53" cy="1072.08" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="300.63" cy="77.28" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="323.48" cy="196.98" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="320.78" cy="323.67" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="312.61" cy="465.27" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="343.45" cy="573.64" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="284.03" cy="696.59" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="327.64" cy="794.42" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="341.63" cy="937.06" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="309.69" cy="1081.2" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="457.1" cy="-53.9" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="409.76" cy="44.64" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="415.33" cy="164.4" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="425.96" cy="339.76" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="460" cy="465.73" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="407.48" cy="558.03" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="424.61" cy="717.6" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="453.13" cy="1032.41" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="586.93" cy="-58.18" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="561.12" cy="62.17" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="573.75" cy="171.14" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="547.9" cy="317.77" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="531.64" cy="453.34" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="562.03" cy="580.25" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="570.13" cy="688.33" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="533.33" cy="785.3" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="570.34" cy="945.26" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="550.27" cy="1068.56" fill="rgba(36, 87, 255, 1)"></circle>
+
+    <!-- Градиентные круги -->
+    <circle r="25" cx="177.19" cy="785.28" fill="url(#SvgjsRadialGradient1001)"></circle>
+    <circle r="25" cx="334.03" cy="790.32" fill="url(#SvgjsRadialGradient1001)"></circle>
+    <circle r="25" cx="323.86" cy="915.99" fill="url(#SvgjsRadialGradient1001)"></circle>
+    <circle r="25" cx="290.15" cy="1069.16" fill="url(#SvgjsRadialGradient1001)"></circle>
+    <circle r="25" cx="412.91" cy="428.15" fill="url(#SvgjsRadialGradient1001)"></circle>
+
+    <!-- Белые точки -->
+    <circle r="5" cx="-31.31" cy="963.39" fill="rgba(255, 255, 255, 0.5)"></circle>
+    <circle r="5" cx="-41.07" cy="1073.67" fill="rgba(255, 255, 255, 0.5)"></circle>
+    <circle r="5" cx="64.95" cy="806.31" fill="rgba(255, 255, 255, 0.5)"></circle>
+    <circle r="5" cx="185.61" cy="913.36" fill="rgba(255, 255, 255, 0.5)"></circle>
+    <circle r="5" cx="216.18" cy="1089.48" fill="rgba(255, 255, 255, 0.5)"></circle>
+    
+    
+    <circle r="5" cx="406.41" cy="-48.2" fill="rgba(255, 255, 255, 0.5)"></circle>
+    
+    
+    
+    
+    
+    
+    
+    <circle r="5" cx="467.12" cy="1093.19" fill="rgba(255, 255, 255, 0.5)"></circle>
+    <circle r="5" cx="531.34" cy="-89.19" fill="rgba(255, 255, 255, 0.5)"></circle>
+    <circle r="5" cx="564.72" cy="51.24" fill="rgba(255, 255, 255, 0.5)"></circle>
+    <circle r="5" cx="555.39" cy="291.36" fill="rgba(255, 255, 255, 0.5)"></circle>
+    <circle r="5" cx="582.15" cy="458.28" fill="rgba(255, 255, 255, 0.5)"></circle>
+    <circle r="5" cx="556.15" cy="569.07" fill="rgba(255, 255, 255, 0.5)"></circle>
+    <circle r="5" cx="577.33" cy="700.04" fill="rgba(255, 255, 255, 0.5)"></circle>
+    <circle r="5" cx="559.29" cy="817.26" fill="rgba(255, 255, 255, 0.5)"></circle>
+    <circle r="5" cx="579" cy="948.81" fill="rgba(255, 255, 255, 0.5)"></circle>
+    <circle r="5" cx="578.54" cy="1063.29" fill="rgba(255, 255, 255, 0.5)"></circle>
+    
+  </g>
+</svg>      
+            </div>
+            <div class="stages-svg-2">
+                <svg 
+                class="svg"
+  xmlns="http://www.w3.org/2000/svg" 
+  version="1.1" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:svgjs="http://svgjs.dev/svgjs" 
+  width="650" 
+  height="1000" 
+  preserveAspectRatio="none" 
+  viewBox="0 0 650 1000"
+>
+  <defs>
+    <mask id="SvgjsMask1000">
+      <rect width="650" height="1000" fill="#ffffff"></rect>
+    </mask>
+    <radialGradient id="SvgjsRadialGradient1001">
+      <stop stop-color="#ffffff" offset="0.1"></stop>
+      <stop stop-color="rgba(36, 87, 255, 0)" offset="0.2"></stop>
+      <stop stop-color="rgba(36, 87, 255, 0)" offset="1"></stop>
+    </radialGradient>
+  </defs>
+  
+  <g mask="url(&quot;#SvgjsMask1000&quot;)" fill="none">
+    <path d="M-51.07 675.68L-51.07 675.68" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M-51.07 675.68L-64.02 794.4" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M-51.07 675.68L-91.34 936.37" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M-64.02 794.4L-64.02 794.4" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M-64.02 794.4L-91.34 936.37" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M-91.34 936.37L-91.34 936.37" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M-91.34 936.37L-81.72 1078.64" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M-81.72 1078.64L-81.72 1078.64" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M-81.72 1078.64L198.34 1039.94" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M-81.72 1078.64L-64.02 794.4" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M166.75 578.26L169.73 659.59" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M166.75 578.26L283.3 569.23" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M166.75 578.26L281.69 457.63" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M166.75 578.26L342.69 665.21" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M166.75 578.26L198.14 800.78" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M169.73 659.59L169.73 659.59" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M169.73 659.59L198.14 800.78" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M169.73 659.59L283.3 569.23" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M198.14 800.78L198.14 800.78" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M196.01 921.43L196.01 921.43" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M198.34 1039.94L198.34 1039.94" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M281.69 457.63L281.69 457.63" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M281.69 457.63L283.3 569.23" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M281.69 457.63L467.95 433.93" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M283.3 569.23L283.3 569.23" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M283.3 569.23L342.69 665.21" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M283.3 569.23L427.18 579.11" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M342.69 665.21L342.69 665.21" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M342.69 665.21L427.18 579.11" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M342.69 665.21L463.78 689" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M327.2 826.99L327.2 826.99" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M327.2 826.99L425.38 782.38" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M327.2 826.99L198.14 800.78" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M321.54 948.92L321.54 948.92" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M431.59 -52.7L431.59 -52.7" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M431.59 -52.7L573.17 -86.13" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M443.08 78.7L443.08 78.7" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M443.08 78.7L460.54 171.05" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M443.08 78.7L570.93 58.42" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M443.08 78.7L587.95 171.08" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M460.54 171.05L460.54 171.05" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M460.54 171.05L587.95 171.08" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M460.54 171.05L412.92 296.41" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M460.54 171.05L570.93 58.42" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M460.54 171.05L592.82 323.98" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M412.92 296.41L412.92 296.41" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M412.92 296.41L467.95 433.93" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M412.92 296.41L592.82 323.98" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M412.92 296.41L281.69 457.63" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M412.92 296.41L587.95 171.08" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M412.92 296.41L571.99 444.75" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M467.95 433.93L467.95 433.93" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M467.95 433.93L571.99 444.75" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M427.18 579.11L427.18 579.11" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M427.18 579.11L463.78 689" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M427.18 579.11L533.82 672.38" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M427.18 579.11L467.95 433.93" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M427.18 579.11L593.26 544.67" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M463.78 689L463.78 689" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M463.78 689L533.82 672.38" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M463.78 689L425.38 782.38" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M463.78 689L588.5 832.44" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M425.38 782.38L425.38 782.38" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M425.38 782.38L342.69 665.21" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M425.38 782.38L533.82 672.38" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M425.38 782.38L588.5 832.44" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M417.51 963.97L417.51 963.97" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M417.51 963.97L553.76 962.35" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M417.51 963.97L327.2 826.99" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M417.51 963.97L425.38 782.38" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M408.17 1042.07L408.17 1042.07" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M573.17 -86.13L573.17 -86.13" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M573.17 -86.13L701.66 -50.54" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M570.93 58.42L660.41 69.19" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M570.93 58.42L587.95 171.08" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M587.95 171.08L587.95 171.08" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M587.95 171.08L684.5 179.17" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M587.95 171.08L660.41 69.19" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M592.82 323.98L592.82 323.98" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M592.82 323.98L571.99 444.75" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M592.82 323.98L666.06 452.08" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M571.99 444.75L571.99 444.75" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M571.99 444.75L666.06 452.08" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M571.99 444.75L593.26 544.67" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M593.26 544.67L593.26 544.67" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M593.26 544.67L665.12 593.69" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M533.82 672.38L533.82 672.38" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M588.5 832.44L588.5 832.44" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M588.5 832.44L553.76 962.35" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M588.5 832.44L717.28 784.47" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M588.5 832.44L692.98 928.79" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M588.5 832.44L533.82 672.38" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M588.5 832.44L688.3 672.54" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M553.76 962.35L553.76 962.35" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M553.76 962.35L692.98 928.79" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M545.33 1048.01L545.33 1048.01" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M545.33 1048.01L671.67 1074.64" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M545.33 1048.01L408.17 1042.07" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M701.66 -50.54L701.66 -50.54" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M701.66 -50.54L802.62 -92.11" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M701.66 -50.54L660.41 69.19" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M660.41 69.19L660.41 69.19" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M660.41 69.19L684.5 179.17" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M660.41 69.19L794.52 66.79" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M684.5 179.17L684.5 179.17" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M684.5 179.17L825.9 157.84" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M666.06 452.08L666.06 452.08" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M666.06 452.08L593.26 544.67" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M665.12 593.69L665.12 593.69" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M665.12 593.69L688.3 672.54" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M665.12 593.69L666.06 452.08" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M665.12 593.69L533.82 672.38" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M688.3 672.54L688.3 672.54" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M688.3 672.54L717.28 784.47" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M688.3 672.54L827.63 656.42" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M688.3 672.54L533.82 672.38" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M688.3 672.54L593.26 544.67" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M717.28 784.47L717.28 784.47" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M717.28 784.47L820.99 790.08" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M717.28 784.47L692.98 928.79" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M692.98 928.79L692.98 928.79" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M692.98 928.79L822.77 934.29" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M671.67 1074.64L671.67 1074.64" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M671.67 1074.64L692.98 928.79" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M802.62 -92.11L802.62 -92.11" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M802.62 -92.11L794.52 66.79" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M802.62 -92.11L660.41 69.19" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M802.62 -92.11L573.17 -86.13" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M802.62 -92.11L825.9 157.84" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M802.62 -92.11L570.93 58.42" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M794.52 66.79L794.52 66.79" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M794.52 66.79L825.9 157.84" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M794.52 66.79L701.66 -50.54" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M794.52 66.79L684.5 179.17" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M794.52 66.79L570.93 58.42" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M825.9 157.84L825.9 157.84" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M825.9 157.84L802.8 340.16" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M825.9 157.84L660.41 69.19" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M825.9 157.84L587.95 171.08" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M825.9 157.84L701.66 -50.54" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M802.8 340.16L802.8 340.16" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M802.8 340.16L807.31 432.83" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M802.8 340.16L666.06 452.08" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M802.8 340.16L827.64 535.6" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M802.8 340.16L684.5 179.17" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M807.31 432.83L807.31 432.83" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M807.31 432.83L827.64 535.6" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M807.31 432.83L666.06 452.08" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M807.31 432.83L665.12 593.69" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M807.31 432.83L827.63 656.42" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M807.31 432.83L571.99 444.75" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M827.64 535.6L827.64 535.6" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M827.64 535.6L827.63 656.42" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M827.64 535.6L665.12 593.69" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M827.63 656.42L827.63 656.42" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M827.63 656.42L820.99 790.08" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M820.99 790.08L820.99 790.08" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M822.77 934.29L822.77 934.29" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M822.77 934.29L838.8 1067.76" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <path d="M838.8 1067.76L838.8 1067.76" stroke="rgba(36, 87, 255, 1)" stroke-width="1.5"></path>
+    <circle r="5" cx="-51.07" cy="675.68" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="-64.02" cy="794.4" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="-91.34" cy="936.37" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="-81.72" cy="1078.64" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="166.75" cy="578.26" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="169.73" cy="659.59" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="198.14" cy="800.78" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="198.34" cy="1039.94" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="281.69" cy="457.63" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="283.3" cy="569.23" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="342.69" cy="665.21" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="327.2" cy="826.99" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="431.59" cy="-52.7" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="443.08" cy="78.7" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="460.54" cy="171.05" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="412.92" cy="296.41" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="467.95" cy="433.93" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="427.18" cy="579.11" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="463.78" cy="689" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="425.38" cy="782.38" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="417.51" cy="963.97" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="408.17" cy="1042.07" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="573.17" cy="-86.13" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="570.93" cy="58.42" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="587.95" cy="171.08" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="592.82" cy="323.98" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="571.99" cy="444.75" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="593.26" cy="544.67" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="533.82" cy="672.38" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="588.5" cy="832.44" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="553.76" cy="962.35" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="545.33" cy="1048.01" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="701.66" cy="-50.54" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="660.41" cy="69.19" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="684.5" cy="179.17" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="666.06" cy="452.08" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="665.12" cy="593.69" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="688.3" cy="672.54" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="717.28" cy="784.47" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="692.98" cy="928.79" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="671.67" cy="1074.64" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="802.62" cy="-92.11" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="794.52" cy="66.79" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="825.9" cy="157.84" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="802.8" cy="340.16" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="807.31" cy="432.83" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="827.64" cy="535.6" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="827.63" cy="656.42" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="820.99" cy="790.08" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="822.77" cy="934.29" fill="rgba(36, 87, 255, 1)"></circle>
+    <circle r="5" cx="838.8" cy="1067.76" fill="rgba(36, 87, 255, 1)"></circle>
+  </g>
+</svg>
+            </div>
+            <h2>Этапы работы</h2>
+            <ul class="stages__list">
+                <li class="stages__list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="35.000000pt" height="35.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+<path d="M3060 5106 c-156 -35 -276 -158 -309 -314 -7 -32 -11 -179 -11 -377 l0 -324 -572 -3 c-569 -3 -573 -3 -628 -26 -120 -49 -204 -137 -240 -251 -26 -82 -29 -344 -5 -391 31 -59 107 -69 156 -21 l29 29 0 155 c0 142 2 157 23 198 16 29 40 54 72 74 l48 30 559 3 558 3 0 -195 0 -195 -366 -3 -366 -3 -29 -33 c-40 -44 -40 -93 0 -133 l29 -29 365 0 364 0 5 -122 c4 -92 11 -137 27 -178 11 -30 21 -56 21 -57 0 -2 -171 -3 -380 -3 -272 0 -386 -3 -405 -12 -56 -25 -72 -107 -31 -155 l24 -28 821 -3 821 -2 0 -670 c0 -739 2 -711 -63 -778 -59 -61 -72 -62 -664 -62 l-533 0 0 200 0 200 368 0 368 0 27 28 c29 30 36 86 16 124 -24 44 -56 48 -427 48 l-349 0 -5 118 c-4 86 -11 132 -27 172 -11 30 -21 56 -21 58 0 1 171 2 380 2 406 0 424 2 450 49 20 39 12 91 -19 122 l-29 29 -816 0 -816 0 0 109 c0 100 -2 112 -23 136 -14 17 -36 28 -63 32 -36 5 -46 1 -75 -25 l-34 -30 -3 -111 -4 -111 -469 0 c-448 0 -472 -1 -531 -21 -114 -38 -188 -106 -242 -219 l-31 -65 -3 -855 c-3 -777 -2 -861 14 -918 22 -84 79 -168 150 -220 109 -81 56 -76 984 -80 568 -2 845 1 889 8 164 28 295 155 330 318 7 33 11 175 11 377 l0 325 533 0 c343 0 554 4 593 11 132 24 235 103 296 226 l33 68 3 702 3 702 487 3 488 3 76 37 c91 45 147 103 191 196 l32 67 3 860 c2 834 2 862 -17 925 -26 84 -85 167 -154 214 -108 74 -55 71 -992 73 -639 1 -853 -1 -895 -11z m1746 -208 c44 -24 91 -81 104 -125 8 -27 10 -287 8 -863 -3 -814 -3 -826 -24 -865 -11 -22 -40 -53 -63 -70 l-43 -30 -841 -3 -841 -2 -51 25 c-53 26 -89 69 -105 126 -16 53 -13 1631 2 1683 16 53 83 120 134 134 26 7 315 10 864 9 756 -2 828 -3 856 -19z m-2740 -2743 c52 -26 88 -70 104 -126 6 -20 10 -251 10 -564 l0 -531 -232 -103 c-206 -91 -240 -103 -289 -103 -32 0 -72 7 -91 16 -18 9 -123 95 -233 191 -217 190 -278 229 -389 248 -108 18 -161 4 -457 -128 -145 -65 -270 -120 -277 -122 -10 -4 -12 102 -10 555 l3 560 30 43 c17 23 50 53 74 66 l44 23 832 0 831 0 50 -25z m-1085 -1191 c18 -9 124 -96 234 -192 214 -187 273 -225 381 -242 38 -6 80 -6 121 0 76 12 61 7 276 102 97 43 180 78 182 78 10 0 4 -314 -7 -358 -15 -62 -78 -125 -140 -140 -34 -9 -269 -12 -841 -12 -877 0 -863 -1 -924 62 -56 58 -63 89 -63 276 l0 169 278 123 c152 68 297 132 322 142 53 22 131 19 181 -8z"/>
+<path d="M3665 4397 c-65 -31 -128 -100 -149 -165 -15 -44 -17 -88 -14 -324 l3 -273 27 -51 c61 -115 202 -178 318 -141 63 19 461 250 500 290 73 74 98 187 65 288 -28 84 -82 128 -330 269 l-219 125 -75 3 c-63 2 -84 -1 -126 -21z m334 -289 c108 -62 204 -121 213 -130 28 -28 23 -76 -11 -106 -16 -15 -115 -76 -220 -136 -204 -116 -218 -120 -261 -74 -19 21 -20 34 -20 265 l0 244 25 24 c13 14 36 25 51 25 16 0 106 -45 223 -112z"/>
+<path d="M607 2019 c-70 -11 -131 -44 -181 -100 -135 -151 -88 -385 97 -481 28 -14 67 -23 118 -26 67 -4 83 -1 138 23 137 62 208 205 176 357 -15 72 -90 164 -163 202 -42 21 -128 33 -185 25z m124 -228 c63 -64 22 -181 -65 -181 -48 0 -85 19 -102 51 -40 79 5 159 91 159 38 0 52 -5 76 -29z"/>
+<path d="M1333 3098 c-30 -14 -56 -73 -48 -106 21 -87 141 -108 180 -31 48 92 -39 182 -132 137z"/>
+</g>
+</svg>                 
+                    <div>
+                        <h4>1. Обсуждения о желаемом</h4>
+                        <p class="stages__list-item-hidden">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta sed fuga, alias illo ipsum libero assumenda architecto quo explicabo quae esse quia exercitationem sint nam provident quisquam aut dolore at?
+                        </p>
+                    </div>
+                    <p class="stages__arrow">></p>
+                </li>
+                <li class="stages__list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="35.000000pt" height="35.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+<path d="M3060 5106 c-156 -35 -276 -158 -309 -314 -7 -32 -11 -179 -11 -377 l0 -324 -572 -3 c-569 -3 -573 -3 -628 -26 -120 -49 -204 -137 -240 -251 -26 -82 -29 -344 -5 -391 31 -59 107 -69 156 -21 l29 29 0 155 c0 142 2 157 23 198 16 29 40 54 72 74 l48 30 559 3 558 3 0 -195 0 -195 -366 -3 -366 -3 -29 -33 c-40 -44 -40 -93 0 -133 l29 -29 365 0 364 0 5 -122 c4 -92 11 -137 27 -178 11 -30 21 -56 21 -57 0 -2 -171 -3 -380 -3 -272 0 -386 -3 -405 -12 -56 -25 -72 -107 -31 -155 l24 -28 821 -3 821 -2 0 -670 c0 -739 2 -711 -63 -778 -59 -61 -72 -62 -664 -62 l-533 0 0 200 0 200 368 0 368 0 27 28 c29 30 36 86 16 124 -24 44 -56 48 -427 48 l-349 0 -5 118 c-4 86 -11 132 -27 172 -11 30 -21 56 -21 58 0 1 171 2 380 2 406 0 424 2 450 49 20 39 12 91 -19 122 l-29 29 -816 0 -816 0 0 109 c0 100 -2 112 -23 136 -14 17 -36 28 -63 32 -36 5 -46 1 -75 -25 l-34 -30 -3 -111 -4 -111 -469 0 c-448 0 -472 -1 -531 -21 -114 -38 -188 -106 -242 -219 l-31 -65 -3 -855 c-3 -777 -2 -861 14 -918 22 -84 79 -168 150 -220 109 -81 56 -76 984 -80 568 -2 845 1 889 8 164 28 295 155 330 318 7 33 11 175 11 377 l0 325 533 0 c343 0 554 4 593 11 132 24 235 103 296 226 l33 68 3 702 3 702 487 3 488 3 76 37 c91 45 147 103 191 196 l32 67 3 860 c2 834 2 862 -17 925 -26 84 -85 167 -154 214 -108 74 -55 71 -992 73 -639 1 -853 -1 -895 -11z m1746 -208 c44 -24 91 -81 104 -125 8 -27 10 -287 8 -863 -3 -814 -3 -826 -24 -865 -11 -22 -40 -53 -63 -70 l-43 -30 -841 -3 -841 -2 -51 25 c-53 26 -89 69 -105 126 -16 53 -13 1631 2 1683 16 53 83 120 134 134 26 7 315 10 864 9 756 -2 828 -3 856 -19z m-2740 -2743 c52 -26 88 -70 104 -126 6 -20 10 -251 10 -564 l0 -531 -232 -103 c-206 -91 -240 -103 -289 -103 -32 0 -72 7 -91 16 -18 9 -123 95 -233 191 -217 190 -278 229 -389 248 -108 18 -161 4 -457 -128 -145 -65 -270 -120 -277 -122 -10 -4 -12 102 -10 555 l3 560 30 43 c17 23 50 53 74 66 l44 23 832 0 831 0 50 -25z m-1085 -1191 c18 -9 124 -96 234 -192 214 -187 273 -225 381 -242 38 -6 80 -6 121 0 76 12 61 7 276 102 97 43 180 78 182 78 10 0 4 -314 -7 -358 -15 -62 -78 -125 -140 -140 -34 -9 -269 -12 -841 -12 -877 0 -863 -1 -924 62 -56 58 -63 89 -63 276 l0 169 278 123 c152 68 297 132 322 142 53 22 131 19 181 -8z"/>
+<path d="M3665 4397 c-65 -31 -128 -100 -149 -165 -15 -44 -17 -88 -14 -324 l3 -273 27 -51 c61 -115 202 -178 318 -141 63 19 461 250 500 290 73 74 98 187 65 288 -28 84 -82 128 -330 269 l-219 125 -75 3 c-63 2 -84 -1 -126 -21z m334 -289 c108 -62 204 -121 213 -130 28 -28 23 -76 -11 -106 -16 -15 -115 -76 -220 -136 -204 -116 -218 -120 -261 -74 -19 21 -20 34 -20 265 l0 244 25 24 c13 14 36 25 51 25 16 0 106 -45 223 -112z"/>
+<path d="M607 2019 c-70 -11 -131 -44 -181 -100 -135 -151 -88 -385 97 -481 28 -14 67 -23 118 -26 67 -4 83 -1 138 23 137 62 208 205 176 357 -15 72 -90 164 -163 202 -42 21 -128 33 -185 25z m124 -228 c63 -64 22 -181 -65 -181 -48 0 -85 19 -102 51 -40 79 5 159 91 159 38 0 52 -5 76 -29z"/>
+<path d="M1333 3098 c-30 -14 -56 -73 -48 -106 21 -87 141 -108 180 -31 48 92 -39 182 -132 137z"/>
+</g>
+</svg>
+                    <div>
+                        <h4>2. Запросим необходимые материалы</h4>
+                        <p class="stages__list-item-hidden">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta sed fuga, alias illo ipsum libero assumenda architecto quo explicabo quae esse quia exercitationem sint nam provident quisquam aut dolore at?
+                        </p>
+                    </div>
+                    <p class="stages__arrow">></p>
+                </li>
+                <li class="stages__list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="35.000000pt" height="35.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+<path d="M2131 5103 c-54 -19 -137 -98 -146 -138 -4 -16 -8 -36 -11 -42 -2 -9 -28 -13 -83 -13 -57 0 -97 -6 -136 -21 -73 -27 -156 -104 -192 -177 l-28 -57 -3 -335 -3 -335 -34 -22 c-19 -12 -46 -44 -62 -70 -26 -44 -28 -57 -32 -171 -4 -157 7 -200 68 -263 47 -48 94 -69 156 -69 30 0 31 -1 48 -85 37 -178 130 -340 270 -470 l79 -73 -8 -82 c-8 -100 -35 -158 -84 -182 -30 -16 -66 -18 -271 -18 -266 0 -288 -4 -374 -69 -33 -25 -67 -41 -95 -45 -271 -43 -483 -195 -585 -419 -35 -75 -302 -963 -310 -1029 -15 -118 32 -243 132 -348 l64 -68 -153 -4 c-133 -3 -158 -6 -194 -25 -188 -100 -182 -359 11 -449 l50 -24 2349 0 c1786 0 2358 3 2388 12 53 16 132 88 153 140 36 88 16 200 -48 266 -64 67 -95 76 -265 80 l-154 4 65 66 c35 37 74 86 86 110 34 67 54 159 48 227 -7 95 -278 980 -330 1080 -50 95 -149 205 -241 264 -76 50 -195 94 -296 111 -60 10 -82 19 -114 46 -77 66 -118 74 -382 74 -196 0 -242 3 -270 16 -51 25 -73 69 -85 174 l-10 90 81 77 c95 89 155 170 205 274 34 74 75 211 75 256 0 20 5 23 43 23 81 1 168 62 201 142 20 46 22 261 4 322 -8 25 -31 59 -59 88 l-47 47 -4 111 c-3 108 -4 113 -31 136 -34 29 -56 30 -91 3 -25 -20 -26 -24 -26 -125 l0 -104 -44 0 c-28 0 -52 7 -67 19 -22 18 -24 28 -29 149 -5 122 -7 132 -36 178 -18 30 -48 60 -78 79 -46 28 -56 30 -145 30 -80 0 -115 -6 -206 -34 -188 -56 -381 -55 -570 5 -98 31 -227 42 -289 24 -56 -15 -120 -69 -148 -124 -18 -34 -23 -62 -26 -161 -5 -144 -16 -165 -89 -165 l-43 0 0 295 c0 244 3 302 15 333 36 85 104 125 213 124 121 -2 186 38 214 130 8 27 22 47 42 59 29 18 60 19 494 19 441 0 465 -1 524 -21 161 -54 247 -171 263 -359 8 -99 21 -120 75 -120 59 0 75 26 73 118 -1 42 -7 99 -14 127 -44 190 -213 354 -407 394 -34 7 -218 11 -525 10 -399 0 -479 -3 -516 -16z m108 -813 c137 -40 205 -50 332 -50 116 0 220 16 349 55 116 35 173 34 211 -4 28 -29 29 -32 29 -133 0 -57 5 -120 11 -142 12 -45 77 -119 119 -136 l30 -12 0 -217 c0 -297 -18 -393 -101 -534 -132 -222 -421 -397 -659 -397 -253 0 -546 187 -674 429 -68 129 -78 186 -83 466 l-5 250 51 27 c35 19 58 41 78 75 26 44 28 58 33 176 5 126 6 129 33 153 40 34 114 32 246 -6z m-589 -590 l0 -160 -25 0 c-14 0 -37 11 -50 25 -23 23 -25 31 -24 127 0 57 4 111 8 122 8 21 47 45 74 46 15 0 17 -14 17 -160z m1903 129 c14 -17 17 -41 17 -134 0 -111 -1 -114 -26 -134 -15 -12 -37 -21 -50 -21 l-24 0 0 161 0 162 33 -7 c17 -3 40 -16 50 -27z m-1298 -1193 c202 -87 403 -87 613 0 45 19 84 34 86 34 2 0 6 -24 10 -53 3 -30 12 -73 20 -95 l15 -42 -434 0 c-239 0 -435 3 -435 8 0 4 7 29 15 56 8 27 15 66 15 88 0 21 3 38 7 38 4 0 43 -15 88 -34z m1470 -331 c79 -46 75 -3 75 -809 l0 -716 -1240 0 -1239 0 -3 306 -3 306 -24 19 c-30 25 -62 24 -95 -2 l-26 -20 -2 -302 -3 -302 -107 -5 c-118 -6 -146 -18 -182 -80 -21 -36 -24 -126 -6 -174 l10 -26 -81 0 -81 0 -109 101 c-130 122 -164 178 -163 274 0 79 257 933 312 1040 74 143 214 248 385 289 l27 6 0 -264 c0 -241 2 -266 18 -287 27 -33 78 -30 109 5 23 27 23 29 23 290 0 257 1 264 23 297 12 18 38 44 56 56 l34 23 1125 0 1125 0 42 -25z m341 -127 c123 -45 247 -156 303 -271 17 -34 93 -264 168 -512 122 -398 138 -458 138 -520 -1 -100 -29 -148 -160 -273 l-107 -102 -80 0 c-78 0 -80 1 -75 22 20 79 19 127 -2 170 -35 71 -59 82 -186 88 l-110 5 -3 712 -2 713 32 -7 c18 -3 56 -14 84 -25z m51 -1577 c-4 -17 -13 -46 -21 -65 l-15 -36 -1519 0 -1519 0 -13 28 c-7 15 -16 44 -20 65 l-7 37 1560 0 1560 0 -6 -29z m793 -264 c14 -7 33 -29 43 -49 16 -33 16 -40 4 -71 -8 -19 -25 -42 -38 -51 -22 -15 -216 -16 -2359 -16 -2143 0 -2337 1 -2359 16 -13 9 -30 32 -38 51 -12 31 -12 38 4 71 10 20 29 42 43 49 37 18 4663 18 4700 0z"/>
+<path d="M2449 1873 c-99 -32 -192 -134 -220 -238 -20 -71 -7 -173 31 -244 61 -113 153 -171 285 -179 110 -6 179 20 256 97 70 70 99 141 99 241 0 100 -29 171 -99 241 -93 92 -228 124 -352 82z m194 -149 c45 -23 66 -44 88 -86 36 -70 18 -181 -37 -229 -66 -58 -169 -65 -242 -17 -116 77 -105 265 20 327 52 25 126 28 171 5z"/>
+</g>
+</svg>
+                    <div>
+                        <h4>3. Начнем работу с промежуточными обсуждениями</h4>
+                        <p class="stages__list-item-hidden">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta sed fuga, alias illo ipsum libero assumenda architecto quo explicabo quae esse quia exercitationem sint nam provident quisquam aut dolore at?
+                        </p>
+                    </div>
+                    <p class="stages__arrow">></p>
+                </li>
+                <li class="stages__list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="35.000000pt" height="35.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+<path d="M4279 4735 c-72 -26 -116 -54 -162 -104 -74 -79 -92 -126 -92 -246 0 -92 3 -106 30 -162 l31 -61 -329 -384 c-181 -210 -342 -398 -357 -416 -26 -32 -29 -33 -51 -19 -13 9 -51 23 -83 33 -117 33 -252 1 -346 -83 l-45 -41 -285 168 c-262 154 -285 169 -280 191 3 13 5 60 5 104 0 71 -4 89 -32 146 -39 79 -102 140 -181 177 -49 23 -70 27 -152 27 -82 0 -103 -4 -152 -27 -149 -70 -240 -242 -209 -394 6 -33 8 -60 4 -62 -5 -1 -134 -76 -288 -167 l-279 -164 -44 41 c-24 22 -69 52 -100 66 -49 23 -70 27 -147 27 -77 0 -98 -4 -147 -27 -76 -35 -148 -104 -184 -175 -27 -53 -29 -67 -29 -163 0 -95 3 -110 27 -157 145 -274 513 -281 659 -11 33 61 34 67 35 177 l0 115 283 164 282 165 32 -30 c79 -74 155 -104 262 -104 93 0 169 28 234 87 28 25 55 44 60 42 4 -1 134 -77 288 -167 l281 -164 -10 -36 c-16 -58 -3 -171 27 -234 71 -152 242 -239 401 -207 81 16 147 54 204 117 66 72 93 145 94 248 0 70 -4 90 -32 149 -28 59 -30 71 -19 85 137 161 682 799 688 805 5 6 28 1 56 -12 198 -91 426 2 503 205 28 75 25 203 -7 275 -24 54 -92 131 -143 163 -84 52 -219 71 -301 40z m206 -134 c124 -58 174 -211 109 -332 -117 -215 -444 -135 -445 109 -1 141 97 242 236 242 37 0 75 -7 100 -19z m-2442 -674 c148 -62 194 -256 89 -377 -60 -71 -141 -99 -230 -79 -219 46 -259 344 -60 443 59 30 147 35 201 13z m-1208 -691 c96 -44 139 -120 133 -232 -3 -61 -8 -79 -33 -116 -137 -193 -435 -104 -436 131 -1 179 175 293 336 217z m2410 13 c61 -17 139 -101 155 -168 37 -156 -71 -295 -230 -295 -137 0 -239 98 -240 232 0 166 149 276 315 231z"/>
+<path d="M3950 1970 l0 -1600 435 0 435 0 0 1600 0 1600 -435 0 -435 0 0 -1600z m740 0 l0 -1470 -305 0 -305 0 0 1470 0 1470 305 0 305 0 0 -1470z"/>
+<path d="M1512 1633 l3 -1258 438 -3 437 -2 0 1260 0 1260 -440 0 -440 0 2 -1257z m748 -3 l0 -1130 -310 0 -310 0 0 1130 0 1130 310 0 310 0 0 -1130z"/>
+<path d="M300 1290 l0 -920 435 0 435 0 0 920 0 920 -435 0 -435 0 0 -920z m740 0 l0 -790 -305 0 -305 0 0 790 0 790 305 0 305 0 0 -790z"/>
+<path d="M2730 1290 l0 -920 438 2 437 3 3 918 2 917 -440 0 -440 0 0 -920z m750 0 l0 -790 -310 0 -310 0 0 790 0 790 310 0 310 0 0 -790z"/>
+</g>
+</svg>
+                    <div>
+                        <h4>4. Настроим яндекс метрику и в покажем как просматривать конверсию </h4>
+                        <p class="stages__list-item-hidden">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta sed fuga, alias illo ipsum libero assumenda architecto quo explicabo quae esse quia exercitationem sint nam provident quisquam aut dolore at?
+                        </p>
+                    </div>
+                    <p class="stages__arrow">></p>
+                </li>
+                <li class="stages__list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="35.000000pt" height="35.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+<path d="M2345 5109 c-642 -62 -1300 -388 -1714 -849 -330 -367 -524 -783 -602 -1291 -32 -207 -33 -610 -1 -814 77 -491 259 -895 567 -1253 501 -583 1297 -927 2075 -899 668 25 1208 243 1639 662 366 356 631 844 751 1385 164 743 -32 1537 -533 2160 -149 184 -388 396 -598 528 -452 285 -1046 424 -1584 371z m135 -900 l0 -741 -87 6 c-214 17 -492 77 -667 145 -121 47 -246 103 -246 110 0 13 77 235 110 316 52 130 166 343 238 445 129 182 310 341 460 404 60 25 153 54 180 55 9 1 12 -154 12 -740z m305 703 c339 -120 634 -508 825 -1085 17 -54 30 -100 28 -102 -2 -3 -49 -24 -104 -48 -251 -112 -519 -179 -811 -203 l-83 -7 0 742 0 742 38 -7 c20 -4 69 -18 107 -32z m-917 -130 c-206 -215 -374 -507 -494 -859 -21 -59 -38 -110 -40 -112 -5 -7 -179 112 -268 184 -50 40 -125 105 -166 144 l-75 71 90 86 c249 237 560 424 894 535 80 26 148 48 150 49 2 0 -39 -44 -91 -98z m1472 41 c319 -109 692 -341 910 -568 l45 -47 -75 -69 c-41 -39 -111 -99 -155 -135 -82 -67 -273 -200 -279 -193 -1 2 -22 60 -46 129 -118 343 -286 633 -489 842 l-94 98 54 -16 c30 -9 88 -27 129 -41z m-2532 -824 c128 -120 276 -233 429 -326 l51 -32 -13 -58 c-62 -256 -115 -663 -115 -880 l0 -63 -495 0 -495 0 0 49 c0 61 25 255 45 354 60 290 187 592 350 837 70 105 142 200 152 200 3 0 44 -37 91 -81z m3637 35 c167 -203 335 -532 415 -813 48 -166 90 -417 90 -538 l0 -43 -493 0 -494 0 -6 148 c-12 250 -47 513 -100 750 l-24 104 60 36 c145 89 366 262 462 361 21 23 42 41 46 41 4 0 23 -20 44 -46z m-2919 -510 c240 -109 573 -192 849 -212 l100 -7 3 -332 2 -333 -580 0 -581 0 6 113 c8 139 32 392 45 472 26 152 64 335 70 335 4 0 43 -16 86 -36z m2187 -101 c45 -232 67 -408 82 -675 l6 -108 -580 0 -581 0 2 333 3 332 100 7 c142 10 288 34 449 75 137 34 354 110 431 151 22 12 45 21 51 22 6 0 22 -61 37 -137z m-2553 -1006 c0 -217 53 -624 114 -879 l14 -58 -111 -72 c-132 -86 -278 -201 -383 -301 l-76 -72 -35 40 c-61 71 -191 274 -253 396 -98 192 -173 403 -215 606 -20 99 -45 293 -45 354 l0 49 495 0 495 0 0 -63z m1318 -269 l-3 -333 -105 -7 c-267 -19 -574 -94 -815 -200 -49 -22 -97 -42 -106 -45 -13 -4 -20 20 -42 134 -45 232 -67 407 -82 676 l-6 107 580 0 581 0 -2 -332z m1317 225 c-9 -161 -25 -326 -41 -438 -20 -145 -66 -375 -74 -375 -4 0 -40 15 -81 34 -256 117 -557 193 -854 214 l-100 7 -3 333 -2 332 581 0 580 0 -6 -107z m1155 65 c0 -190 -71 -517 -160 -747 -79 -203 -242 -487 -354 -616 l-35 -40 -63 61 c-130 125 -328 278 -460 355 l-45 27 23 103 c54 238 89 501 101 752 l6 147 494 0 493 0 0 -42z m-2470 -1529 l0 -741 -32 7 c-388 77 -715 463 -929 1095 -22 63 -39 117 -39 121 0 10 224 104 327 138 197 64 449 112 631 119 l42 2 0 -741z m435 715 c131 -19 337 -70 455 -114 112 -41 270 -111 270 -119 0 -4 -17 -58 -39 -121 -167 -495 -401 -837 -686 -1003 -64 -37 -176 -80 -237 -91 l-38 -7 0 742 0 742 83 -7 c45 -4 132 -14 192 -22z m-1556 -386 c37 -116 89 -243 151 -373 108 -224 215 -380 364 -533 l90 -92 -55 16 c-388 114 -721 306 -1006 579 l-78 75 80 75 c44 41 115 103 158 138 75 59 256 186 268 187 3 0 15 -33 28 -72z m2538 4 c116 -79 217 -161 323 -261 l75 -71 -90 -86 c-267 -255 -593 -444 -963 -557 l-84 -26 89 92 c190 196 338 440 460 757 23 58 49 131 59 163 10 31 20 57 24 57 3 0 51 -31 107 -68z"/>
+</g>
+</svg>
+                    <div>
+                        <h4>5. Полностью выведем сайт в интернет</h4>
+                        <p class="stages__list-item-hidden">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta sed fuga, alias illo ipsum libero assumenda architecto quo explicabo quae esse quia exercitationem sint nam provident quisquam aut dolore at?
+                        </p>
+                    </div>
+                    <p class="stages__arrow">></p>
+                </li>
+                <li class="stages__list-item">
+                    <img src="" alt=" ">
+                    <div>
+                        <h4>6. Передадим полностью готовый сайт</h4>
+                        <p class="stages__list-item-hidden">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta sed fuga, alias illo ipsum libero assumenda architecto quo explicabo quae esse quia exercitationem sint nam provident quisquam aut dolore at?
+                        </p>
+                    </div>
+                    <p class="stages__arrow">></p>
+                </li>
+                <li class="stages__list-item">
+                    <img src="" alt=" ">
+                    <div>
+                        <h4>7. Будем сопровождать вас на каждом этапе</h4>
+                        <p class="stages__list-item-hidden">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta sed fuga, alias illo ipsum libero assumenda architecto quo explicabo quae esse quia exercitationem sint nam provident quisquam aut dolore at?
+                        </p>
+                    </div>
+                    <p class="stages__arrow">></p>
+                </li>
+            </ul>
+        </section>
+        <section class="prices container">
+            <h2>Тарифы</h2>
+            <ul class="prices__list">
+                <li class="prices__list-item prices__list-item-start">
+                    <h3>Тариф: Start</h3>
+                    <div class="prices__list-cost">
+                        <p>13990</p>
+                        <p>18000</p>
+                    </div>
+                    <ul>
+                        <li>
+                            Lorem ipsum dolor sit.
                         </li>
-                        <li class="clients__scroll__container-item">
-                            <h3 class="h3"><b>АО "Аромат"</b></h3>
-                            <div>
-                                <img src="./img/clients/clients-2.jpg" alt="">
-                            </div>
-                            <p>Парфюмерно-косметическая фабрика "Аромат" является одним из крупнейших производителей на рынке косметики России, мощностью более 50 миллионов единиц продукции в год.</p>
+                        <li>
+                            Lorem ipsum dolor.
                         </li>
-                        <li class="clients__scroll__container-item">
-                            <h3 class="h3"><b>ООО "ПАЛП Инвест"</b></h3>
-                            <div>
-                                <img src="./img/clients/clients-3.jpg" alt="">
-                            </div>
-                            <p>ПАЛП Инвест – российский производитель бумаги санитарно-гигиенического назначения и изделий тиссью в России. Компания входит в топ-8 лидеров  российского рынка целлюлозно-бумажной продукции по версии Forbes.</p>
+                        <li>
+                            Lorem ipsum dolor sit amet.
                         </li>
-                        <li class="clients__scroll__container-item">
-                            <h3 class="h3"><b>ООО ТК "Майский"</b></h3>
-                            <div>
-                                <img src="./img/clients/clients-4.webp" alt="">
-                            </div>
-                            <p>Тепличный комбинат «Майский» Республика Татарстан был организован в 1974 году с главной задачей обеспечение населения РТ и крупных промышленных центров России свежей овощной продукцией.</p>
+                        <li>
+                            Lorem, ipsum dolor.
                         </li>
-                        <li class="clients__scroll__container-item">
-                            <h3 class="h3"><b>ООО "Данафлекс НАНО"</b></h3>
-                            <div>
-                                <img src="./img/clients/clients-5.webp" alt="">
-                            </div>
-                            <p>компания Danaflex производит гибкую упаковку и пленочные материалы с печатью</p>
+                        <li>
+                            Lorem ipsum dolor sit.
                         </li>
-                        <li class="clients__scroll__container-item">
-                            <h3 class="h3"><b>ООО "Птицеводческий комплекс "Ак Барс"</b></h3>
-                            <div>
-                                <img src="./img/clients/clients-6.jpg" alt="">
-                            </div>
-                            <p>ООО «Птицеводческий комплекс «Ак Барс» было образовано 10 сентября 2007 года на базе агрофирмы «Ак Барс-Пестрецы». Предприятие входит в структуру АО «Холдинговая компания Ак Барс».</p>
+                        <li>
+                            Lorem ipsum dolor.
                         </li>
-                        <li class="clients__scroll__container-item">
-                            <h3 class="h3"><b>ООО "Завод ТАТКАБЕЛЬ"</b></h3>
-                            <div>
-                                <img src="./img/clients/clients-7.jpeg" alt="">
-                            </div>
-                            <p>«Завод ТАТКАБЕЛЬ» ‒ один изкрупнейших заводов России по выпуску кабельно-проводниковой продукции</p>
+                        <li>
+                            Lorem ipsum dolor sit amet.
                         </li>
-                        <li class="clients__scroll__container-item">
-                            <h3 class="h3"><b>ООО "МОСТОПОЕЗД-33"</b></h3>
-                            <div>
-                                <img src="./img/clients/clients-8.jpeg" alt="">
-                            </div>
-                            <p>Общество с ограниченной ответственностью «Мостопоезд–33» сегодня – это активно развивающееся многопрофильное предприятие, оказывающие услуги в сфере железнодорожных перевозок и логистики.</p>
-                        </li>
-                        <li class="clients__scroll__container-item">
-                            <h3 class="h3"><b>ООО "КАЗАНСКИЙ ХЛЕБОЗАВОД №2"</b></h3>
-                            <div>
-                                <img src="./img/clients/clients-9.webp" alt="">
-                            </div>
-                            <p>Предприятие, специализирующееся на производстве хлеба и мучных кондитерских изделий, включая торты и пирожные.</p>
+                        <li>
+                            Lorem, ipsum dolor.
                         </li>
                     </ul>
-                </div>
-            </div>
-        </section> -->
-        <section class="contacts container">
-            <h2 class="h2">Контакты</h2>
-            <div class="contacts__information">
-                <p>Адрес: 420095, Республика Татарстан, г. Казань, ул. Восстания, 100, корп.5300 <br>
-Телефон: <a href="tel:+7 843 212-54-03"><span class="blue"><b>+7 843 212-54-03</b></span></a> <br>
-E-mail: energo.alekseev@yandex.ru</p>
-                <div class="contacts__information-map">
-                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad91c9ebc9df6728430b0062c804bfd1da5fb194041bf49d4a4b41587f17f6c7b&amp;width=1053&amp;height=675&amp;lang=ru_RU&amp;scroll=true"></script>
-                </div>
-            </div>
+                    <button class="prices__list-button button" data-js-applications>Узнать подробнее</button>
+                </li>
+                <li class="prices__list-item prices__list-item-medium">
+                    <h3>Тариф: Medium</h3>
+                    <div class="prices__list-cost">
+                        <p>17990</p>
+                        <p>22000</p>
+                    </div>
+                    <ul>
+                        <li>
+                            Lorem ipsum dolor sit.
+                        </li>
+                        <li>
+                            Lorem ipsum dolor.
+                        </li>
+                        <li>
+                            Lorem ipsum dolor sit amet.
+                        </li>
+                        <li>
+                            Lorem, ipsum dolor.
+                        </li>
+                        <li>
+                            Lorem ipsum dolor sit.
+                        </li>
+                        <li>
+                            Lorem ipsum dolor.
+                        </li>
+                        <li>
+                            Lorem ipsum dolor sit amet.
+                        </li>
+                        <li>
+                            Lorem, ipsum dolor.
+                        </li>
+                    </ul>
+                    <button class="prices__list-button button" data-js-applications>Узнать подробнее</button>
+                </li>
+                <li class="prices__list-item prices__list-item-premium">
+                    <h3>Тариф: Premium</h3>
+                    <div class="prices__list-cost">
+                        <p>22990</p>
+                        <p>28000</p>
+                    </div>
+                    <ul>
+                        <li>
+                            Lorem ipsum dolor sit.
+                        </li>
+                        <li>
+                            Lorem ipsum dolor.
+                        </li>
+                        <li>
+                            Lorem ipsum dolor sit amet.
+                        </li>
+                        <li>
+                            Lorem, ipsum dolor.
+                        </li>
+                        <li>
+                            Lorem ipsum dolor sit.
+                        </li>
+                        <li>
+                            Lorem ipsum dolor.
+                        </li>
+                        <li>
+                            Lorem ipsum dolor sit amet.
+                        </li>
+                        <li>
+                            Lorem, ipsum dolor.
+                        </li>
+                    </ul>
+                    <button class="prices__list-button button" data-js-applications>Узнать подробнее</button>
+                </li>
+            </ul>
         </section>
     </main>
     <footer class="footer">
-        <div class="footer__info container">
-            <div class="logo">
-                <img src="img/header/logo.png" alt="">
+        <div class="footer__inner container">
+            <div class="footer__extra">
+                <div class="footer__extra-menu">
+                    <ul class="footer__extra-menu-list">
+                        <li class="footer__extra-menu-item">
+                            <a href="" class="footer__extra-menu-link">
+                                Terms & Conditions
+                            </a>
+                        </li>
+                        <li class="footer__extra-menu-item">
+                            <a href="" class="footer__extra-menu-link">
+                                Privacy Policy
+                            </a>
+                        </li>
+                    </ul>                 
+                </div>
+                <div class="footer__soc1als soc1als">
+                    <ul class="soc1als__list">
+                        <li class="soc1als__item">
+                            <a href="" class="soc1als__link" target="_blank" aria-label="Twitter" title="Twitter">
+                                <img src="icons/1.svg" alt="/" height="24" width="24">
+                            </a>
+                        </li>
+                        <li class="soc1als__item">
+                            <a href="" class="soc1als__link" target="_blank" aria-label="Medium" title="Medium">
+                                <img src="icons/2.svg" alt="/" height="24" width="24">
+                            </a>
+                        </li>
+                        <li class="soc1als__item">
+                            <a href="" class="soc1als__link" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+                                <img src="icons/3.svg" alt="/" height="24" width="24">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="footer__copyright">© <time datetime="2024">2024</time>  FutureTech. All rights reserved.</p>
             </div>
-            <div class="footer__info-nav">
-                <a class="footer-info-nav-item nav-services">УСЛУГИ</a>
-                <a class="footer-info-nav-item nav-home">О НАС</a>
-                <a class="footer-info-nav-item nav-clients">НАШИ КЛИЕНТЫ</a>
-                <a class="footer-info-nav-item nav-contacts">КОНТАКТЫ</a>
-            </div>
-            <div class="footer__info-soc1als">
-                <a href="tel:+7 843 212-54-03" class="footer__info-number"><b>+7 843 212-54-03</b></a>
-                <a class="footer__info-e-mail"><b>energo.alekseev@yandex.ru</b></a>
-            </div>
-        </div>
-        <div class="footer__company">
-            <p>© 2010 Энергоспецремонт</p>
         </div>
     </footer>
-    <script src="./scripts/Dragscroll.js"></script>
+    
+    <script src="./scripts/stages.js"></script>
+    <script src="./scripts/visible.js"></script>
+    <script src="scripts/order.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 </html>

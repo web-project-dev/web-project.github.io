@@ -4,17 +4,21 @@
 @use 'utils';
 @use 'globals';
 
-@use './blocks/header';
-@use './blocks/logo';
-@use './blocks/burger-button';
-@use './blocks/hero';
-@use './blocks/animated-text';
+@use './blocks/form';
 @use './blocks/overlay';
-@use './blocks/home';
-@use './blocks/services';
-@use './blocks/services-models';
-@use './blocks/clients';
-@use './blocks/contacts';
+@use './blocks/burger-button';
+@use './blocks/logo';
+@use './blocks/header';
+@use './blocks/button';
+@use './blocks/animated-text';
+@use './blocks/stars';
+
+@use './blocks/soc1als';
 @use './blocks/footer';
 
-
+@use './blocks/metrics';
+@use './blocks/resources-preview';
+@use './blocks/advantages';
+@use './blocks/hero';
+@use './blocks/stages';
+@use './blocks/prices';

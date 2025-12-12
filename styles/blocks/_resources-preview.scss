@@ -1,0 +1,89 @@
+@use '../helpers' as *;
+
+.resources-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    row-gap: rem(30);
+    transform: translateX(rem(650));
+    opacity: 0;
+    transition: 1.5s;
+
+    &.is-visible { 
+        -webkit-transform: translateX(rem(650));
+        -moz-transform: translateX(rem(650));
+        -ms-transform: translateX(rem(650));
+        -o-transform: translateX(rem(650));
+        opacity: 1;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+
+    &__cost {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: end;
+
+        &-container {
+            padding: rem(15) rem(25);
+            background-color: var(--color-accent);
+            height: max-content;
+            margin: 10rem 5rem 5rem 5rem;
+            z-index: 10;
+            border-radius: 0.5rem;
+            color: var(--color-light);
+        }
+
+        p {
+            margin: 0;
+            line-height: 1.4;
+
+            span {
+                font-size: fluid(35, 22);
+            }
+        }
+        
+    }
+
+    &-container {
+        position: absolute;
+        width: rem(500);
+        height: rem(700);
+
+        svg {
+            position: absolute;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            box-shadow: inset 0 50px 35px -10px var(--color-light), inset 0 -50px 35px -10px var(--color-light);
+            z-index: 10;
+            border-radius: inherit;
+            z-index: 4;
+        }
+    }
+
+
+    &__body {
+        display: grid;
+        row-gap: rem(14);
+        padding-left: rem(80);
+        // padding-bottom: rem(80);
+    }
+
+    &__button {
+        margin-left: rem(80);
+        margin-bottom: rem(80);
+    }
+}

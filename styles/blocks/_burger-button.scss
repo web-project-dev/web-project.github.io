@@ -7,18 +7,20 @@
     flex-direction: column;
     justify-content: space-between;
     padding: rem(8.5) rem(4.25);
-    color: var(--color-light);
+    color: var(--color-light-40);
     background-color: transparent;
     border: none;
 
+    &:hover {
+        color: var(--color-accent);
+    }
+
     &.is-active {
         .burger-button__line {
-            color: var(--color-black-accent);
-
             &:first-child {
                 rotate: 45deg;
                 transform-origin: 0;
-                translate: 0.26em 0.39em;
+                translate: 0.24em 0.34em;
             }
             
             &:nth-child(2) {

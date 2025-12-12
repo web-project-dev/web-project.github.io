@@ -1,11 +1,13 @@
 @use '../helpers/' as *;
 
 .overlay {
-    width: 100vw;
-    height: 100dvh;
-    max-height: 100vh;
-    background-color: #4949497e;
-    z-index: 60;
     position: fixed;
-    display: none;
+    z-index: 15;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-transperty);
+
+    &:not(.is-active) {
+        display: none;
+    }
 }

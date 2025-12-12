@@ -1,0 +1,85 @@
+@use '../helpers' as *;
+
+.prices {
+    padding-block: rem(100);
+    position: relative;
+    z-index: 10;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: rem(55);
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow);
+            border-radius: rem(15);
+            -webkit-border-radius: rem(15);
+            -moz-border-radius: rem(15);
+            -ms-border-radius: rem(15);
+            -o-border-radius: rem(15);
+            padding: rem(75) rem(55) rem(45) rem(55);
+            font-size: fluid(20, 14);
+            color: var(--color-light-40);
+
+            &-start {
+                background-color: var(--color-light-10);
+            }
+
+            &-medium {
+                background-color: var(--color-blue);
+            }
+
+            &-premium {
+                background: linear-gradient(115deg, var(--color-blue) 27%, #7494ff 137%);
+            }
+
+            h3 {
+                color: var(--color-light-40);
+            }
+
+            div {
+                display: flex;
+                align-items: flex-start;
+                gap: rem(12);
+                padding-block: rem(25);
+
+                p {
+                    margin: 0;
+                }
+
+                :first-child {
+                    color: var(--color-accent);
+                    font-size: fluid(58, 30);
+                    line-height: 1;
+                }
+
+                :last-child {
+                    text-decoration: line-through;
+                    font-size: fluid(26, 18);
+                }
+            }
+            
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: rem(15);
+            }
+
+            h3 {
+                margin: 0;
+                text-align: center;
+            }
+        }
+
+        &-button {
+            margin-top: rem(25);
+        }
+
+        @media (width <= rem(1015)) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

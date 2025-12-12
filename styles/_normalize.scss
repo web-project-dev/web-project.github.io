@@ -60,6 +60,10 @@
  :where(ul[class]) {
    list-style: none;
  }
+
+ :where(address[class]) {
+   font-style: normal;
+ }
  
  /**
    Обнуляем вертикальные внешние отступы параграфа,
@@ -148,7 +152,30 @@
    cursor: pointer;
  }
  
-
+ /**
+   Приводим к единому цвету svg-элементы
+   (за исключением тех, у которых уже указан
+   атрибут fill со значением 'none' или начинается с 'url')
+  */
+ :where([fill]:not(
+   [fill="none"],
+   [fill^="url"]
+ )) {
+   fill: currentColor;
+ }
+ 
+ /**
+   Приводим к единому цвету svg-элементы
+   (за исключением тех, у которых уже указан
+   атрибут stroke со значением 'none')
+  */
+ :where([stroke]:not(
+   [stroke="none"],
+   [stroke^="url"]
+ )) {
+   stroke: currentColor;
+ }
+ 
  button {
   background-color: none;
   padding: 0;

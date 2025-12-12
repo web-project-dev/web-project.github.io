@@ -1,10 +1,7 @@
-@use '../helpers/' as *;
-
+@use '../helpers' as *;
 
 .logo {
-    width: rem(300);  
-    
-    @include mobile-s {
-        width: rem(230);
-    }
+    font-size: fluid(65, 45); 
+    color: var(--color-accent);  
+    line-height: 1;
 }
