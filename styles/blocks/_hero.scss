@@ -39,20 +39,24 @@
         }
 
         h1 {
-            font-family: var(--font-family-title)
+            font-family: var(--font-family-title);
+
+            @include mobile-s {
+                margin-block: rem(10);
+            }
+        }
+
+        @include mobile-s {
+            padding: rem(20) rem(0) rem(50) 0;
         }
     }
 
     &__subtitle {
-        @include fluid-text(30, 18);
+        @include fluid-text(30, 16);
 
         font-family: var(--font-family-accent);
         font-weight: 500;
         color: var(--color-light-40);
-
-        &:not(:last-child) {
-            margin-bottom: rem(30);
-        }
     }
 
     &__title {

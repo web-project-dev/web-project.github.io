@@ -41,4 +41,8 @@
     @include laptop {
         --container-width: #{rem(1280)};
     }
+
+    @include mobile-s {
+        --header-height: #{rem(90)};
+    }
 } 
