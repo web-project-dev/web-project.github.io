@@ -66,8 +66,8 @@
     }
 
     &__sign {
-        font-weight: 600;
-        font-size: 40px;
+        font-weight: 400;
+        font-size: fluid(40, 28);
         color: var(--color-accent);
     }
 }

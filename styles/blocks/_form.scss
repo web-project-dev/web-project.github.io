@@ -39,9 +39,10 @@
             cursor: pointer;
 
             &:hover {
-                background-color: var(--color-accent-hover);
-                outline: var(--outline);
-                color: var(--color-dark-10);
+                background-color: var(--color-light);
+                border: 1px solid var(--color-accent);
+                border-color: var(--color-accent);
+                color: var(--color-accent);
             }
         }
     }

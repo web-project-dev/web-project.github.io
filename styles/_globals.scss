@@ -1,7 +1,7 @@
 @use 'helpers' as *;
 
 html {
-    &.isLock {
+    &.is-lock {
         overflow: hidden;
     }
 }
@@ -30,7 +30,11 @@ svg:where(:not([class])) {
 li:not([class]) {
     list-style: none;
     position: relative;
-    padding-left: 25px; 
+    padding-left: rem(25); 
+
+    @include mobile-s {
+        padding-left: rem(20);
+    }
 }
 
 li:not([class])::before {
@@ -44,6 +48,12 @@ li:not([class])::before {
     left: 0;
     top: rem(6);
     color: var(--color-accent);
+
+    @include mobile-s {
+        width: rem(12);
+        height: rem(12);
+        top: rem(4);
+    }
 }
 
 h1, .h1,
