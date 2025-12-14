@@ -29,6 +29,14 @@
         opacity: 0;
         transition: 1.5s;
 
+        @include mobile-s {
+            transform: translateX(rem(-250));
+            -webkit-transform: translateX(rem(-250));
+            -moz-transform: translateX(rem(-250));
+            -ms-transform: translateX(rem(-250));
+            -o-transform: translateX(rem(-250));
+}
+
         &.is-visible {
             opacity: 1;
             transform: translateX(0);

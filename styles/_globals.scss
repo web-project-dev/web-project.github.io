@@ -90,16 +90,16 @@ h3, .h3 {
 }
 
 h4, .h4 {
-    @include fluid-text(22, 17);
+    @include fluid-text(22, 15);
     margin: 0;
 }
 
 h5, .h5 {
-    @include fluid-text(24, 18);
+    @include fluid-text(20, 15);
 }
 
 h6, .h6 {
-    @include fluid-text(20, 16);
+    @include fluid-text(19, 14);
 }
 
 a, 

@@ -1,3 +1,5 @@
+import scrollLock from './scrollLock.js'
+
 class Header {
     selectors = {
         root: '[data-js-header]',
@@ -7,25 +9,41 @@ class Header {
 
     stateClasses = {
         isActive: 'is-active',
-        IsLock: 'is-lock',
     }
 
     constructor() {
         this.rootElement = document.querySelector(this.selectors.root)
         this.overlayElement = this.rootElement.querySelector(this.selectors.overlay)
         this.burgerButtonElement = this.rootElement.querySelector(this.selectors.burgerButton)
-        this.bindElement()
-    }
-    
-    onBurgerButtonClick = () => {
-        this.overlayElement.classList.toggle(this.stateClasses.isActive)
-        this.burgerButtonElement.classList.toggle(this.stateClasses.isActive)
-        document.documentElement.classList.toggle(this.stateClasses.IsLock)
+        this.bindElements()
     }
 
-    bindElement() {
-        this.burgerButtonElement.addEventListener('click', this.onBurgerButtonClick)
+    toggleBurger = () => {
+        const isActive = this.overlayElement.classList.contains(this.stateClasses.isActive)
+
+        if (isActive) {
+            this.closeBurger()
+        } else {
+            this.openBurger()
+        }
+    }
+
+    openBurger() {
+        this.overlayElement.classList.add(this.stateClasses.isActive)
+        this.burgerButtonElement.classList.add(this.stateClasses.isActive)
+        scrollLock.lock()
+    }
+
+    closeBurger() {
+        this.overlayElement.classList.remove(this.stateClasses.isActive)
+        this.burgerButtonElement.classList.remove(this.stateClasses.isActive)
+        scrollLock.unlock()
+    }
+
+    bindElements() {
+        this.burgerButtonElement.addEventListener('click', this.toggleBurger)
+        this.overlayElement.addEventListener('click', this.closeBurger)
     }
 }
 
-export default Header;
+export default Header

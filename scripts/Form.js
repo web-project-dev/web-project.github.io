@@ -1,3 +1,5 @@
+import scrollLock from './scrollLock.js'
+
 class Form {
     selectors = {
         root: '[data-js-body]',
@@ -9,7 +11,6 @@ class Form {
 
     stateClasses = {
         isActive: 'is-active',
-        isLock: 'is-lock',
     }
 
     constructor() {
@@ -21,27 +22,26 @@ class Form {
         this.bindElements()
     }
 
-    onApplicationsButtonClick = () => {
+    openForm = () => {
         this.formElement.classList.add(this.stateClasses.isActive)
         this.overlayElement.classList.add(this.stateClasses.isActive)
-        document.documentElement.classList.add(this.stateClasses.isLock) 
+        scrollLock.lock()
     }
 
-    offApplicationsButtonClick = () => {
+    closeForm = () => {
         this.formElement.classList.remove(this.stateClasses.isActive)
         this.overlayElement.classList.remove(this.stateClasses.isActive)
-        document.documentElement.classList.remove(this.stateClasses.isLock) 
+        scrollLock.unlock()
     }
 
     bindElements() {
-        // Обработчики для всех кнопок с data-js-applications
         this.applicationsButtonElements.forEach(button => {
-            button.addEventListener('click', this.onApplicationsButtonClick)
+            button.addEventListener('click', this.openForm)
         })
-        
-        this.overlayElement.addEventListener('click', this.offApplicationsButtonClick)
-        this.closeFormButtonElement.addEventListener('click', this.offApplicationsButtonClick)
+
+        this.closeFormButtonElement.addEventListener('click', this.closeForm)
+        this.overlayElement.addEventListener('click', this.closeForm)
     }
 }
 
-export default Form;
+export default Form
