@@ -55,7 +55,7 @@
                 }
 
                 @include mobile-s {
-                    padding: rem(15) rem(10);
+                    padding: rem(20) rem(10);
                 }
             }
 
@@ -91,7 +91,7 @@
             -moz-transform: translateY(60%);
             -ms-transform: translateY(60%);
             -o-transform: translateY(60%);
-            overflow-x: hidden;
+            overflow: hidden;
             max-width: 650px;
             width: 100%;
             height: 1000px;

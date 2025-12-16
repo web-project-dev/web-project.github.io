@@ -19,13 +19,15 @@
     --color-animated-2: #2457ff;
     --color-animated-3: #76acff;
 
+    --color-gold: #f5a623;
+
     --color-transperty: #60606067;
 
     --gradient: linear-gradient(45deg, var(--color-dark-15) 64%, var(--color-accent) 136%);
 
     --border: #{rem(1)} solid var(--color-light-15);
 
-    --shadow:  #{rem(01)} #{rem(10)} #{rem(30)} var(--color-light-15);
+    --shadow:  #{rem(0)} #{rem(10)} #{rem(30)} var(--color-light-15);
 
     --font-family-base: "Montserrat", sans-serif;
     --font-family-accent: "Montserrat", sans-serif;
