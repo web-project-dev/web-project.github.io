@@ -1308,6 +1308,7 @@ button[aria-label]::before {
   background-color: var(--color-light-10);
   padding: 3.75rem 1.5625rem;
   border-radius: 12px;
+  margin: 0 0.3125rem;
 }
 .reviews-container {
   background-color: var(--color-accent);
