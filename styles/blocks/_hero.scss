@@ -1,7 +1,8 @@
 @use '../helpers' as *;
 
 .hero {
-    height: calc(100vh - var(--header-height));
+    height: 100vh;
+    padding-top: rem(100);
 
     &__main {
         display: grid;

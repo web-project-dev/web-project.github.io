@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     font-family: var(--font-family-base);
     letter-spacing: -0.03em;
-    color: var(--color-gray-50);
+    color: var(--color-light-40);
     background-color: var(--color-light);
     overflow-x: hidden;
 
@@ -73,7 +73,9 @@ h3, .h3 {
 }
 
 h1, .h1 {
-    @include fluid-text(70, 45);
+    font-weight: 700;
+    letter-spacing: -3px;
+    @include fluid-text(68, 39);
 
     line-height: 1.2;
 }

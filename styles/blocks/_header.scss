@@ -1,18 +1,21 @@
 @use '../helpers' as *;
 
 .header {
-    position: relative;
+    position: fixed;
+    width: calc(100% - rem(5) * 2);
+    margin-block: rem(5);
+    align-self: center;
     z-index: 10;
     background-color: var(--color-light-10);
     box-shadow: var(--shadow);
-    height: var(--header-height);
+    border-radius: rem(50);
     justify-content: center;
     display: flex;
     flex-direction: column;
 
     &__body {
 
-        padding: rem(24) rem(70);
+        padding: rem(15) rem(25);
 
         &-inner {
             display: flex;

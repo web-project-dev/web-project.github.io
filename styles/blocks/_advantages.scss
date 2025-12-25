@@ -23,6 +23,7 @@
             background-color: var(--color-light);
             padding: rem(25) rem(25);
             font-size: fluid(20, 14);
+            background: linear-gradient(180deg, var(--color-blue) 27%, #9fc0ff 137%);
 
             svg {
                 max-width: 50px;
@@ -56,3 +57,6 @@
         }
     }
 }
+
+
+

@@ -27,16 +27,14 @@
 
     --border: #{rem(1)} solid var(--color-light-15);
 
-    --shadow:  #{rem(0)} #{rem(10)} #{rem(30)} var(--color-light-15);
+    --shadow:  #{rem(0)} #{rem(3)} #{rem(15)} var(--color-gray-50);
 
     --font-family-base: "Montserrat", sans-serif;
     --font-family-accent: "Montserrat", sans-serif;
-    --font-family-title: "Roboto Condensed", sans-serif;
+    --font-family-title: "Comfortaa", sans-serif;
     
     --container-width: #{rem(1330)};
     --container-padding-x: #{rem(16)};
-
-    --header-height: #{rem(112)};
 
     --transition-duration: 0.5s;
 

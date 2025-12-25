@@ -227,13 +227,12 @@ body {
   --color-transperty: #60606067;
   --gradient: linear-gradient(45deg, var(--color-dark-15) 64%, var(--color-accent) 136%);
   --border: 0.0625rem solid var(--color-light-15);
-  --shadow: 0rem 0.625rem 1.875rem var(--color-light-15);
+  --shadow: 0rem 0.1875rem 0.9375rem var(--color-gray-50);
   --font-family-base: "Montserrat", sans-serif;
   --font-family-accent: "Montserrat", sans-serif;
-  --font-family-title: "Roboto Condensed", sans-serif;
+  --font-family-title: "Comfortaa", sans-serif;
   --container-width: 83.125rem;
   --container-padding-x: 1rem;
-  --header-height: 7rem;
   --transition-duration: 0.5s;
 }
 @media (width <= 90.06125rem) {
@@ -288,7 +287,7 @@ body {
   flex-direction: column;
   font-family: var(--font-family-base);
   letter-spacing: -0.03em;
-  color: var(--color-gray-50);
+  color: var(--color-light-40);
   background-color: var(--color-light);
   overflow-x: hidden;
 }
@@ -349,7 +348,9 @@ h3, .h3 {
 }
 
 h1, .h1 {
-  font-size: clamp(2.8125rem, 2.4142156863rem + 1.6339869281vw, 4.375rem);
+  font-weight: 700;
+  letter-spacing: -3px;
+  font-size: clamp(2.4375rem, 1.9754901961rem + 1.8954248366vw, 4.25rem);
   line-height: 1.2;
 }
 
@@ -579,17 +580,20 @@ button[aria-label]::before {
 }
 
 .header {
-  position: relative;
+  position: fixed;
+  width: calc(100% - 0.3125rem * 2);
+  margin-block: 0.3125rem;
+  align-self: center;
   z-index: 10;
   background-color: var(--color-light-10);
   box-shadow: var(--shadow);
-  height: var(--header-height);
+  border-radius: 3.125rem;
   justify-content: center;
   display: flex;
   flex-direction: column;
 }
 .header__body {
-  padding: 1.5rem 4.375rem;
+  padding: 0.9375rem 1.5625rem;
 }
 .header__body-inner {
   display: flex;
@@ -996,6 +1000,7 @@ button[aria-label]::before {
   background-color: var(--color-light);
   padding: 1.5625rem 1.5625rem;
   font-size: clamp(0.875rem, 0.7794117647rem + 0.3921568627vw, 1.25rem);
+  background: linear-gradient(180deg, var(--color-blue) 27%, #9fc0ff 137%);
 }
 .advantages__list-item svg {
   max-width: 50px;
@@ -1029,7 +1034,8 @@ button[aria-label]::before {
 }
 
 .hero {
-  height: calc(100vh - var(--header-height));
+  height: 100vh;
+  padding-top: 6.25rem;
 }
 .hero__main {
   display: grid;
@@ -1302,6 +1308,7 @@ button[aria-label]::before {
 
 .reviews {
   max-width: 62.5rem;
+  width: 100%;
   margin: 40px auto;
   font-family: Arial, sans-serif;
   position: relative;
@@ -1313,6 +1320,9 @@ button[aria-label]::before {
 .reviews-container {
   background-color: var(--color-accent);
   padding-block: 3.125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .reviews-container h2 {
   color: var(--color-light);
