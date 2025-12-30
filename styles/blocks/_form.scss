@@ -30,10 +30,18 @@
         display: flex;
         flex-direction: column;
         gap: rem(15);
-        margin-bottom: rem(150);
-        max-width: rem(900);
+        max-width: rem(650);
         width: 100%;
         justify-self: center;
+        border-radius: rem(8);
+        border: var(--border);
+        margin: rem(50) rem(5) rem(100) rem(5);
+        padding-block: rem(10) rem(115);
+
+        @include mobile-s {
+            margin-block: rem(50) rem(50);
+            padding-block: rem(10) rem(35);
+        }
 
         h2 {
             margin-block: rem(60);
@@ -43,6 +51,7 @@
             display: grid;
             gap: rem(15);
             padding: 0 rem(100) rem(30) rem(100);
+
 
             input {
                 width: 100%;
