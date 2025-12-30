@@ -1,17 +1,22 @@
 @use '../helpers' as *;
 
 .header {
-    position: fixed;
-    width: calc(100% - rem(5) * 2);
-    margin-block: rem(5);
-    align-self: center;
+    position: absolute;
+    width: 100%;
     z-index: 10;
     background-color: var(--color-light-10);
     box-shadow: var(--shadow);
-    border-radius: rem(50);
     justify-content: center;
     display: flex;
     flex-direction: column;
+
+    @include mobile-s {
+        position: fixed;
+        width: calc(100% - 0.3125rem * 2);
+        margin-block: 0.3125rem;
+        align-self: center;
+        border-radius: 3.125rem;
+    }
 
     &__body {
 

@@ -25,10 +25,20 @@
 
     &__body {
         grid-area: body;
-        padding: rem(110) rem(50) rem(100) 0;
+        padding: 4% 10% 10% 0;
         transform: translateX(rem(-650));
         opacity: 0;
         transition: 1.5s;
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @include laptop-above {
+            padding: rem(110) rem(50) rem(100) 0;
+        }
 
         @include mobile-s {
             transform: translateX(rem(-250));
@@ -36,7 +46,8 @@
             -moz-transform: translateX(rem(-250));
             -ms-transform: translateX(rem(-250));
             -o-transform: translateX(rem(-250));
-}
+            padding: rem(20) rem(0) rem(62) 0;
+        }
 
         &.is-visible {
             opacity: 1;
@@ -54,10 +65,6 @@
                 margin-block: rem(10);
                 white-space: pre-line;
             }
-        }
-
-        @include mobile-s {
-            padding: rem(20) rem(0) rem(50) 0;
         }
     }
 
