@@ -19,6 +19,8 @@
         @include tablet {
             display: flex;
             flex-direction: column;
+            height: 100%;
+            justify-content: space-evenly;
         }
 
         @include mobile-s {
@@ -55,6 +57,10 @@
                 border-right: var(--border);
                 border-bottom: none;
             }
+        }
+
+        @include tablet {
+            padding: rem(0);
         }
 
         @include mobile-s {

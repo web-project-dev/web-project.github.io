@@ -869,6 +869,8 @@ button[aria-label]::before {
   .metrics__list {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
   }
 }
 @media (width <= 32.56125rem) {
@@ -904,6 +906,11 @@ button[aria-label]::before {
   .metrics__item:not(:last-child) {
     border-right: var(--border);
     border-bottom: none;
+  }
+}
+@media (width <= 76.93625rem) {
+  .metrics__item {
+    padding: 0rem;
   }
 }
 @media (width <= 32.56125rem) {
@@ -1068,6 +1075,7 @@ button[aria-label]::before {
 @media (width <= 76.93625rem) {
   .hero__main {
     grid-template-areas: "body metrics" "body metrics";
+    height: 100%;
   }
 }
 @media (width <= 32.56125rem) {

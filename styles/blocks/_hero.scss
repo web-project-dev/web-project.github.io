@@ -14,6 +14,7 @@
 
         @include tablet {
             grid-template-areas: 'body metrics' 'body metrics';
+            height: 100%;
         }
 
         @include mobile-s {
