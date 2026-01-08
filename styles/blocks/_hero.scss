@@ -1,7 +1,6 @@
 @use '../helpers' as *;
 
 .hero {
-    height: 100vh;
     padding-top: rem(100);
 
     &__main {
@@ -11,6 +10,7 @@
         'body resources-preview'
         'metrics resources-preview'
         ;
+        padding-bottom: rem(40);
 
         @include tablet {
             grid-template-areas: 'body metrics' 'body metrics';
