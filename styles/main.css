@@ -291,6 +291,7 @@ body {
   color: var(--color-light-40);
   background-color: var(--color-light);
   overflow-x: hidden;
+  touch-action: manipulation;
 }
 
 main {
