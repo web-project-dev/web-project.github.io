@@ -6,6 +6,7 @@
     box-shadow: 0 13px 20px var(--color-gray-60);
     position: relative;
     z-index: 5;
+    border-radius: 0 0 rem(30) rem(30);
 
     &__list {
         display: grid;
@@ -26,6 +27,26 @@
             background: linear-gradient(180deg, var(--color-blue) 27%, #9fc0ff 137%);
             max-width: 450px;
             align-self: center;
+            opacity: 0;
+            transform: translateY(150px);
+            -webkit-transform: translateY(150px);
+            -moz-transform: translateY(150px);
+            -ms-transform: translateY(150px);
+            -o-transform: translateY(150px);
+
+            &.in-view {
+                opacity: 1;
+                transition: 1s;
+                transform: translateY(0);
+                -webkit-transform: translateY(0);
+                -moz-transform: translateY(0);
+                -ms-transform: translateY(0);
+                -o-transform: translateY(0);
+                -webkit-transition: 1s;
+                -moz-transition: 1s;
+                -ms-transition: 1s;
+                -o-transition: 1s;
+            }
 
             svg {
                 max-width: 65px;

@@ -2,6 +2,26 @@
 
 .hero {
     padding-top: rem(100);
+    position: relative;
+    background-image: url('../img/hero/hero-grad-1.png');
+    background-repeat: no-repeat;
+    background-position: left;
+
+    // Псевдоэлемент для фона
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/hero/own-wave.png'), url('../img/hero/hero-grad-2.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom, right;
+        z-index: 5;
+    }
+
 
     &__main {
         display: grid;
@@ -11,6 +31,8 @@
         'metrics resources-preview'
         ;
         padding-bottom: rem(40);
+        position: relative;
+        z-index: 1;
 
         @include tablet {
             grid-template-areas: 'body metrics' 'body metrics';

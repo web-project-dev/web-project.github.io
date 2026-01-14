@@ -229,8 +229,8 @@ body {
   --border: 0.0625rem solid var(--color-light-15);
   --shadow: 0rem 0.1875rem 0.9375rem var(--color-gray-50);
   --shadow-icons: 0rem 0.1875rem 0.9375rem var(--color-gray-60);
-  --font-family-base: "Montserrat", sans-serif;
-  --font-family-accent: "Montserrat", sans-serif;
+  --font-family-base: "Nunito Sans", sans-serif;
+  --font-family-accent: "Nunito Sans", sans-serif;
   --font-family-title: "Comfortaa", sans-serif;
   --container-width: 83.125rem;
   --container-padding-x: 1rem;
@@ -964,6 +964,7 @@ button[aria-label]::before {
   z-index: 10;
   border-radius: 0.5rem;
   color: var(--color-light);
+  box-shadow: 0 0 3.8125rem 0.8125rem var(--color-accent);
 }
 @media (width <= 90.06125rem) {
   .resources-preview__cost-container {
@@ -1014,6 +1015,7 @@ button[aria-label]::before {
   box-shadow: 0 13px 20px var(--color-gray-60);
   position: relative;
   z-index: 5;
+  border-radius: 0 0 1.875rem 1.875rem;
 }
 .advantages__list {
   display: grid;
@@ -1034,6 +1036,25 @@ button[aria-label]::before {
   background: linear-gradient(180deg, var(--color-blue) 27%, #9fc0ff 137%);
   max-width: 450px;
   align-self: center;
+  opacity: 0;
+  transform: translateY(150px);
+  -webkit-transform: translateY(150px);
+  -moz-transform: translateY(150px);
+  -ms-transform: translateY(150px);
+  -o-transform: translateY(150px);
+}
+.advantages__list-item.in-view {
+  opacity: 1;
+  transition: 1s;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
 }
 .advantages__list-item svg {
   max-width: 65px;
@@ -1071,12 +1092,31 @@ button[aria-label]::before {
 
 .hero {
   padding-top: 6.25rem;
+  position: relative;
+  background-image: url("../img/hero/hero-grad-1.png");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/hero/own-wave.png"), url("../img/hero/hero-grad-2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom, right;
+  z-index: 5;
 }
 .hero__main {
   display: grid;
   grid-template-columns: 60% auto;
   grid-template-areas: "body resources-preview" "metrics resources-preview";
   padding-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
 }
 @media (width <= 76.93625rem) {
   .hero__main {
@@ -1178,6 +1218,9 @@ button[aria-label]::before {
   padding-right: var(--paddingX);
 }
 
+.stages {
+  margin-top: 3.125rem;
+}
 .stages__list {
   display: flex;
   flex-direction: column;
@@ -1300,15 +1343,51 @@ button[aria-label]::before {
   padding: 4.6875rem 3.4375rem 2.8125rem 3.4375rem;
   font-size: clamp(0.875rem, 0.7794117647rem + 0.3921568627vw, 1.25rem);
   color: var(--color-light-40);
+  height: -moz-max-content;
+  height: max-content;
+  opacity: 0;
+  transform: translateY(150px);
+  -webkit-transform: translateY(150px);
+  -moz-transform: translateY(150px);
+  -ms-transform: translateY(150px);
+  -o-transform: translateY(150px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 .prices__list-item-start {
   background-color: var(--color-light-10);
 }
+.prices__list-item-start.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transition-delay: 0.3s;
+}
 .prices__list-item-medium {
   background-color: var(--color-blue);
 }
+.prices__list-item-medium.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transition-delay: 1s;
+}
 .prices__list-item-premium {
   background: linear-gradient(115deg, var(--color-blue) 27%, #7494ff 137%);
+}
+.prices__list-item-premium.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transition-delay: 1.7s;
 }
 .prices__list-item h3 {
   color: var(--color-light-40);
@@ -1368,6 +1447,7 @@ button[aria-label]::before {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 1.875rem;
 }
 .reviews-container h2 {
   color: var(--color-light);

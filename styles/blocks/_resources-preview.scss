@@ -37,6 +37,8 @@
             z-index: 10;
             border-radius: 0.5rem;
             color: var(--color-light);
+            box-shadow: 0 0 rem(61) rem(13) var(--color-accent);
+;
 
             @include laptop {
                 margin: 10% 5rem 5rem 5rem;

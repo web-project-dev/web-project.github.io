@@ -1,6 +1,8 @@
 @use '../helpers' as *;
 
 .stages {
+    margin-top: rem(50);
+
     &__list {
         display: flex;
         flex-direction: column;

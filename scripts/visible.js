@@ -25,3 +25,22 @@ document.addEventListener('DOMContentLoaded', function() {
     metricsTextItems();
     resourcesTextItems();
 });
+
+
+
+//анимации при скролле
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        // observer.unobserve(entry.target); // если нужно один раз
+      }
+    });
+  }
+);
+
+document
+  .querySelectorAll('.animate-on-scroll')
+  .forEach(el => observer.observe(el));
