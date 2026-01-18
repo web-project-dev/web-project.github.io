@@ -40,20 +40,20 @@ li:not([class]) {
 
 li:not([class])::before {
     content: "";
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='8' fill='%232457ff'/%3E%3C/svg%3E");
+   background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"%3E%3Cpath fill="%23d7d7d7" d="M44 24a20 20 0 1 1-40 0 20 20 0 0 1 40 0z"/%3E%3Cpath fill="%237e9cff" d="M34.602 14.602 21 28.199l-5.602-5.598-2.797 2.797L21 33.801l16.398-16.402z"/%3E%3C/svg%3E');
     background-size: contain;
     color: var(--color-accent);
-    width: rem(16);
-    height: rem(16);
+    width: rem(18);
+    height: rem(18);
     position: absolute;
     left: 0;
-    top: rem(6);
+    top: rem(2.5);
     color: var(--color-accent);
 
     @include mobile-s {
-        width: rem(12);
-        height: rem(12);
-        top: rem(4);
+        width: rem(14);
+        height: rem(14);
+        top: rem(2);
     }
 }
 
