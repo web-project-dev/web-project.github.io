@@ -5,6 +5,19 @@
     position: relative;
     z-index: 5;
 
+    &-star {
+        color: var(--color-accent);
+
+        &::before {
+            content: "";
+            background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path fill='%232457ff' d='M268 492l-30-69-71-9c-102-13-108-30-37-97l56-52-13-60c-24-113-1-130 92-70l55 35 55-35c93-60 116-43 92 70l-13 60 56 52c71 67 65 84-37 97l-71 9-30 69c-24 54-35 68-52 68-17 0-28-14-52-68z' transform='translate(-87 -116) scale(0.1 -0.1)'/></svg>");
+            background-size: contain;
+            width: rem(16.4);
+            height: rem(16.4);
+            display: block;
+        }
+    }
+
     &__list {
         display: flex;
         flex-wrap: wrap;
@@ -30,6 +43,7 @@
             -ms-transform: translateY(150px);
             -o-transform: translateY(150px);
             transition: opacity 1s ease, transform 1s ease;
+
 
             &-start {
                 background-color: var(--color-light-10);
@@ -66,7 +80,7 @@
             }
 
             &-premium {
-                background: linear-gradient(115deg, var(--color-blue) 27%, #7494ff 137%);
+                background: linear-gradient(115deg, var(--color-blue) 27%, #7494ff 160%);
 
                 &.in-view {
                     opacity: 1;
@@ -98,8 +112,9 @@
 
                 :first-child {
                     color: var(--color-accent);
-                    font-size: fluid(58, 30);
+                    font-size: fluid(50, 30);
                     line-height: 1;
+                    font-weight: 600;
                 }
 
                 :last-child {
@@ -117,7 +132,14 @@
 
             h3 {
                 margin: 0;
-                text-align: center;
+
+                display: flex;
+                justify-content: space-between;
+            }
+
+            @include mobile-s {
+                
+                padding: rem(43) rem(36) rem(29) rem(36);
             }
         }
 

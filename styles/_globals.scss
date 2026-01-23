@@ -40,15 +40,14 @@ li:not([class]) {
 
 li:not([class])::before {
     content: "";
-   background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"%3E%3Cpath fill="%23d7d7d7" d="M44 24a20 20 0 1 1-40 0 20 20 0 0 1 40 0z"/%3E%3Cpath fill="%237e9cff" d="M34.602 14.602 21 28.199l-5.602-5.598-2.797 2.797L21 33.801l16.398-16.402z"/%3E%3C/svg%3E');
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23666666' d='M20.797 5.803l-.707.707-11.076 11.076-4.607-4.593-.707-.707L2.287 13.703l.707.707 6.021 6.006 12.488-12.49.707-.707-1.413-1.414z'/></svg>");
     background-size: contain;
     color: var(--color-accent);
-    width: rem(18);
-    height: rem(18);
+    width: rem(16.4);
+    height: rem(16.4);
     position: absolute;
     left: 0;
-    top: rem(2.5);
-    color: var(--color-accent);
+    top: rem(4.7);
 
     @include mobile-s {
         width: rem(14);

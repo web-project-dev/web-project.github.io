@@ -73,7 +73,8 @@
             -moz-transform: translateX(rem(-250));
             -ms-transform: translateX(rem(-250));
             -o-transform: translateX(rem(-250));
-            padding: rem(20) rem(0) rem(62) 0;
+            padding: rem(20) rem(0) rem(65) 0;
+            gap: rem(10);
         }
 
         &.is-visible {

@@ -10,6 +10,7 @@
   padding: rem(60) rem(25);
   border-radius: 12px;
   margin: 0 rem(5);
+  z-index: 5;
 
   &-container {
     background-color: var(--color-accent);
@@ -18,9 +19,16 @@
     flex-direction: column;
     align-items: center;
     border-radius: rem(30);
+    position: relative;
+    z-index: 5;
+    background-image: url('../img/advantages/adv-bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+
     h2 {
       color: var(--color-light);
     }
+
   }
 
   &__viewport {
@@ -71,12 +79,21 @@
     transform: translateY(-50%);
     background-color: var(--color-light);
     border: none;
-    width: 60px;
-    height: 60px;
+    width: rem(60);
+    height: rem(60);
     border-radius: 50%;
     cursor: pointer;
     box-shadow: var(--shadow);
     font-size: 35px;
+
+    @include mobile-s {
+
+      width: rem(45);
+      height: rem(45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
     &:disabled {
       opacity: 0;
