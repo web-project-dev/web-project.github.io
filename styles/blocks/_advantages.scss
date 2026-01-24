@@ -7,8 +7,7 @@
     z-index: 5;
     border-radius: 0 0 rem(30) rem(30);
 
-    &::before {
-        content: "";
+    &-background {
         position: absolute;
         top: 0;
         left: 0;
@@ -25,7 +24,11 @@
         -moz-border-radius: 0 0 rem(30) rem(30);
         -ms-border-radius: 0 0 rem(30) rem(30);
         -o-border-radius: 0 0 rem(30) rem(30);
-}
+
+        @include mobile-s {
+            background-attachment: local;
+        }
+    }
 
     &__list {
         display: grid;

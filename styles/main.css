@@ -370,7 +370,7 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: clamp(1.25rem, 1.2181372549rem + 0.1307189542vw, 1.375rem);
+  font-size: clamp(1.0625rem, 0.9828431373rem + 0.3267973856vw, 1.375rem);
   margin: 0;
 }
 
@@ -1016,8 +1016,7 @@ button[aria-label]::before {
   z-index: 5;
   border-radius: 0 0 1.875rem 1.875rem;
 }
-.advantages::before {
-  content: "";
+.advantages-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -1034,6 +1033,11 @@ button[aria-label]::before {
   -moz-border-radius: 0 0 1.875rem 1.875rem;
   -ms-border-radius: 0 0 1.875rem 1.875rem;
   -o-border-radius: 0 0 1.875rem 1.875rem;
+}
+@media (width <= 32.56125rem) {
+  .advantages-background {
+    background-attachment: local;
+  }
 }
 .advantages__list {
   display: grid;
@@ -1459,7 +1463,6 @@ button[aria-label]::before {
 }
 .prices__list-item h4 {
   color: var(--color-light-40);
-  font-size: clamp(1.375rem, 1.3909313725rem + -0.0653594771vw, 1.3125rem);
   margin: 0;
   display: flex;
   justify-content: space-between;
@@ -1505,7 +1508,6 @@ button[aria-label]::before {
   margin: 40px auto;
   font-family: Arial, sans-serif;
   position: relative;
-  background-color: var(--color-light-10);
   padding: 3.75rem 1.5625rem;
   border-radius: 12px;
   margin: 0 0.3125rem;
