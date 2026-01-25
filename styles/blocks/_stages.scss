@@ -3,6 +3,25 @@
 .stages {
     margin-top: rem(50);
 
+    &-arrow {
+        fill: var(--color-light-40);
+        width: rem(20);
+        height: rem(20);
+
+        &.active {
+            transform: rotateZ(180deg);
+            -webkit-transform: rotateZ(180deg);
+            -moz-transform: rotateZ(180deg);
+            -ms-transform: rotateZ(180deg);
+            -o-transform: rotateZ(180deg);
+        }
+
+        @include mobile-s {
+            width: rem(14);
+            height: rem(14);
+        }
+    }
+
     &__list {
         display: flex;
         flex-direction: column;
@@ -20,10 +39,10 @@
             gap: rem(20);
             align-items: center;
 
-            svg {
+            svg:where(:not([class])) {
                 justify-self: center;
-                max-width: 45px;
-                max-height: 45px;
+                max-width: rem(45);
+                max-height: rem(45);
                 width: 100%;
                 height: 100%;
 
@@ -32,6 +51,7 @@
                     max-height: 35px;
                 }
             }
+            
             p {
                 justify-self: center;
                 margin-top: rem(15);
