@@ -3,8 +3,8 @@ const nav2 = document.querySelectorAll('.nav-2')
 const nav3 = document.querySelectorAll('.nav-3')
 const nav4 = document.querySelectorAll('.nav-4')
 
-const burgerButton = document.querySelector('.burder-button')
-const burgerOverlay = document.querySelector('.header-overlay') 
+const burgerButton = document.querySelector('.burger-button')
+const burgerOverlay = document.querySelector('.header__overlay') 
 
 
 nav1.forEach(item => {
