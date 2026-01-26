@@ -221,6 +221,7 @@ body {
   --color-accent: #2457ff;
   --color-blue: #7e9cff;
   --color-blue: #edf3ff;
+  --color-black: #242424;
   --color-animated-1: #497dff;
   --color-animated-2: #2457ff;
   --color-animated-3: #76acff;
@@ -802,7 +803,7 @@ button[aria-label]::before {
 .footer {
   display: flex;
   flex-direction: column;
-  background-color: var(--color-accent);
+  background-color: var(--color-black);
   padding-top: 3.75rem;
   color: var(--color-light);
   bottom: 0;
@@ -1145,10 +1146,10 @@ button[aria-label]::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../img/hero/own-wave.png"), url("../img/hero/hero-grad-2.png");
+  background-image: url("../img/hero/own-wave.png");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: bottom, right;
+  background-position: bottom;
   z-index: 5;
 }
 @media (width <= 32.56125rem) {
