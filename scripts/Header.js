@@ -2,9 +2,9 @@ import scrollLock from './scrollLock.js'
 
 class Header {
     selectors = {
-        root: '[data-js-header]',
-        overlay: '[data-js-overlay]',
-        burgerButton: '[data-js-burger-button]',
+        root: '.header',
+        overlay: '.header__overlay',
+        burgerButton: '.burger-button',
     }
 
     stateClasses = {
@@ -13,8 +13,13 @@ class Header {
 
     constructor() {
         this.rootElement = document.querySelector(this.selectors.root)
+        if (!this.rootElement) return
+        
         this.overlayElement = this.rootElement.querySelector(this.selectors.overlay)
         this.burgerButtonElement = this.rootElement.querySelector(this.selectors.burgerButton)
+        
+        if (!this.overlayElement || !this.burgerButtonElement) return
+        
         this.bindElements()
     }
 
@@ -31,18 +36,32 @@ class Header {
     openBurger() {
         this.overlayElement.classList.add(this.stateClasses.isActive)
         this.burgerButtonElement.classList.add(this.stateClasses.isActive)
-        scrollLock.lock()
+        if (scrollLock && scrollLock.lock) scrollLock.lock()
     }
 
     closeBurger() {
         this.overlayElement.classList.remove(this.stateClasses.isActive)
         this.burgerButtonElement.classList.remove(this.stateClasses.isActive)
-        scrollLock.unlock()
+        if (scrollLock && scrollLock.unlock) scrollLock.unlock()
     }
 
     bindElements() {
         this.burgerButtonElement.addEventListener('click', this.toggleBurger)
-        this.overlayElement.addEventListener('click', this.closeBurger)
+        
+        // Закрытие при клике на оверлей
+        this.overlayElement.addEventListener('click', (e) => {
+            if (e.target === this.overlayElement) {
+                this.closeBurger()
+            }
+        })
+        
+        // Закрытие при клике на ссылки внутри оверлея
+        const overlayLinks = this.overlayElement.querySelectorAll('a')
+        overlayLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                this.closeBurger()
+            })
+        })
     }
 }
 
