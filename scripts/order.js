@@ -1,37 +1,34 @@
-const TOKEN = '7463890978:AAFUemWSZNqmonm2piekAXOifD7Md9e4gw0';
-const CHAT_ID = '-1002657984220';
-const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
-const succes = document.querySelector('.succes');
 
-const subButtons = document.querySelectorAll('.submit-button');
+function initTelegramForm() {
+    const succes = document.querySelector('.succes');
+    const subButtons = document.querySelectorAll('.submit-button');
+    const inputName = document.querySelector('.form-container__item-name');
+    const inputPhone = document.querySelector('.form-container__item-phone');
 
-const inputName = document.querySelector('.form-container__item-name');
-const inputPhone = document.querySelector('.form-container__item-phone');
+    subButtons.forEach((subButton) => {
+        subButton.addEventListener('click', function(e) {
+            e.preventDefault();
 
-subButtons.forEach((subButton) => {
-    subButton.addEventListener('click', function(e) {
+            let message = 'Заявка с сайта\n' +
+                'Имя: ' + inputName.value + '\n' +
+                'Номер телефона: ' + inputPhone.value;
 
-        e.preventDefault();
-
-        let message = 'Заявка с сайта\n' +
-            'Имя: ' + inputName.value + '\n' +
-            'Номер телефона: ' + inputPhone.value;
-
-        axios.post(URL_API, {
-            chat_id: CHAT_ID,
-            parse_mode: 'html',
-            text: message
-        })
-        .then((res) => {
-            succes.classList.remove('disp');
-        })
-        .catch((err) => {
-            console.warn(err);
-        })
-        .finally(() => {
-            console.log('Скрипт выполнен');
+            axios.post(URL_API, {
+                chat_id: CHAT_ID,
+                parse_mode: 'html',
+                text: message
+            })
+            .then((res) => {
+                succes.classList.remove('disp');
+            })
+            .catch((err) => {
+                console.warn(err);
+            })
+            .finally(() => {
+                console.log('Скрипт выполнен');
+            });
         });
-
     });
-});
+}
+
